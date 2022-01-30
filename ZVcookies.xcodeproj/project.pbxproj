@@ -14,6 +14,15 @@
 		CF23C47127A6203B00D0202E /* ZVcookiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C47027A6203B00D0202E /* ZVcookiesTests.swift */; };
 		CF23C47B27A6203B00D0202E /* ZVcookiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C47A27A6203B00D0202E /* ZVcookiesUITests.swift */; };
 		CF23C47D27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C47C27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift */; };
+		CF23C48A27A6218100D0202E /* Aboutview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C48927A6218100D0202E /* Aboutview.swift */; };
+		CF23C48C27A622E100D0202E /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C48B27A622E100D0202E /* Palette.swift */; };
+		CF23C48E27A627EB00D0202E /* Staticassets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C48D27A627EB00D0202E /* Staticassets.swift */; };
+		CF23C49027A629E900D0202E /* Storeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C48F27A629E900D0202E /* Storeview.swift */; };
+		CF23C49627A62D8300D0202E /* Harcoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49527A62D8300D0202E /* Harcoded.swift */; };
+		CF23C49827A62F4300D0202E /* Catalogview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49727A62F4300D0202E /* Catalogview.swift */; };
+		CF23C49B27A63E5700D0202E /* throwaway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49A27A63E5700D0202E /* throwaway.swift */; };
+		CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49C27A64B6B00D0202E /* Homeview.swift */; };
+		CF23C4A027A6505800D0202E /* workingdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49F27A6505800D0202E /* workingdata.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		CF23C47627A6203B00D0202E /* ZVcookiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZVcookiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF23C47A27A6203B00D0202E /* ZVcookiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZVcookiesUITests.swift; sourceTree = "<group>"; };
 		CF23C47C27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZVcookiesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF23C48927A6218100D0202E /* Aboutview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aboutview.swift; sourceTree = "<group>"; };
+		CF23C48B27A622E100D0202E /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		CF23C48D27A627EB00D0202E /* Staticassets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staticassets.swift; sourceTree = "<group>"; };
+		CF23C48F27A629E900D0202E /* Storeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storeview.swift; sourceTree = "<group>"; };
+		CF23C49527A62D8300D0202E /* Harcoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harcoded.swift; sourceTree = "<group>"; };
+		CF23C49727A62F4300D0202E /* Catalogview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogview.swift; sourceTree = "<group>"; };
+		CF23C49A27A63E5700D0202E /* throwaway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = throwaway.swift; sourceTree = "<group>"; };
+		CF23C49C27A64B6B00D0202E /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
+		CF23C49F27A6505800D0202E /* workingdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workingdata.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +112,11 @@
 		CF23C45E27A6203A00D0202E /* ZVcookies */ = {
 			isa = PBXGroup;
 			children = (
+				CF23C49E27A6504E00D0202E /* State controllers */,
+				CF23C49927A63E4D00D0202E /* temp */,
+				CF23C49427A62D4700D0202E /* Static assets */,
+				CF23C49327A62D3B00D0202E /* Views */,
 				CF23C45F27A6203A00D0202E /* ZVcookiesApp.swift */,
-				CF23C46127A6203A00D0202E /* ContentView.swift */,
-				CF23C46327A6203B00D0202E /* Assets.xcassets */,
 				CF23C46527A6203B00D0202E /* Preview Content */,
 			);
 			path = ZVcookies;
@@ -125,6 +145,45 @@
 				CF23C47C27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift */,
 			);
 			path = ZVcookiesUITests;
+			sourceTree = "<group>";
+		};
+		CF23C49327A62D3B00D0202E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C46127A6203A00D0202E /* ContentView.swift */,
+				CF23C48F27A629E900D0202E /* Storeview.swift */,
+				CF23C48927A6218100D0202E /* Aboutview.swift */,
+				CF23C49727A62F4300D0202E /* Catalogview.swift */,
+				CF23C49C27A64B6B00D0202E /* Homeview.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF23C49427A62D4700D0202E /* Static assets */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C46327A6203B00D0202E /* Assets.xcassets */,
+				CF23C48B27A622E100D0202E /* Palette.swift */,
+				CF23C48D27A627EB00D0202E /* Staticassets.swift */,
+				CF23C49527A62D8300D0202E /* Harcoded.swift */,
+			);
+			path = "Static assets";
+			sourceTree = "<group>";
+		};
+		CF23C49927A63E4D00D0202E /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C49A27A63E5700D0202E /* throwaway.swift */,
+			);
+			path = temp;
+			sourceTree = "<group>";
+		};
+		CF23C49E27A6504E00D0202E /* State controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C49F27A6505800D0202E /* workingdata.swift */,
+			);
+			path = "State controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +316,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF23C49627A62D8300D0202E /* Harcoded.swift in Sources */,
+				CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */,
+				CF23C48E27A627EB00D0202E /* Staticassets.swift in Sources */,
+				CF23C49827A62F4300D0202E /* Catalogview.swift in Sources */,
 				CF23C46227A6203A00D0202E /* ContentView.swift in Sources */,
+				CF23C48A27A6218100D0202E /* Aboutview.swift in Sources */,
+				CF23C49027A629E900D0202E /* Storeview.swift in Sources */,
 				CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */,
+				CF23C48C27A622E100D0202E /* Palette.swift in Sources */,
+				CF23C4A027A6505800D0202E /* workingdata.swift in Sources */,
+				CF23C49B27A63E5700D0202E /* throwaway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
