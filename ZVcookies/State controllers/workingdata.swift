@@ -11,4 +11,6 @@ import SwiftUI
 class workingdata: ObservableObject {
     @Published var pickedscreen = 0
     @Published var doshowback = false
+    
+    
 }

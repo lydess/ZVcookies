@@ -20,7 +20,7 @@ struct HomeButtonView: View {
                 
             }.foregroundColor(.white).padding(6.0).font(.system(size: 30))
             
-        }.background(.red).cornerRadius(40)
+        }.background(.red).cornerRadius(30)
     }
 }
 

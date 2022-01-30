@@ -12,8 +12,8 @@ struct Homeview: View {
     let buttonlist = hard.gethomelayout()
     let data  = (1...5).map { "item \($0)" }
     var newgrids = [
-        GridItem(.flexible(minimum: 1, maximum: 200)),
-        GridItem(.flexible(minimum: 1, maximum: 200))
+        GridItem(.flexible(minimum: 1, maximum: 600)),
+        GridItem(.flexible(minimum: 1, maximum: 600))
     ]
     var body: some View {
         VStack {
@@ -25,8 +25,13 @@ struct Homeview: View {
             LazyVGrid(columns: newgrids) {
                 ForEach(buttonlist, id: \.pageid) {button in
                     HomeButtonView(titletext: button.maintext, pageid: button.pageid)
+                        .padding(.top, 50.0)
                 }
+               
+                
+                
             }
+            Spacer()
         }
     }
 }

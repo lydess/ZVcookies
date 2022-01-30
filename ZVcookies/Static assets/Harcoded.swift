@@ -52,8 +52,8 @@ class hardcoded  {
         let storebutton = Homebutton(pageid: 2, maintext: "What we have")
         
         var buttonlist = [
-        storebutton,
-        aboutbutton
+        aboutbutton,
+        storebutton
         ]
         return buttonlist
         

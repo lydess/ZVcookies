@@ -13,35 +13,25 @@ let uicol = Palate()
 
 struct MasterView: View {
     @StateObject var working = VM
+    @State var test = 0
+    var buttlist = hard.gethomelayout()
     var uicol = Palate()
     var body: some View {
-        VStack {
+        
+        TabView(selection: $working.pickedscreen) {
             
-            if working.pickedscreen != 0 {
-                HStack {
-                    Button("<"){working.pickedscreen = 0}
-                    .padding(.leading, 30.0)
-                    Spacer()
-                }
-            } else {
-                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
-            }
-            TabView(selection: $working.pickedscreen) {
-                Homeview().tag(0)
-                AboutView().tag(1)
-                Storeview().tag(2)
-            }
-            Button("cycle"){
-                switch working.pickedscreen {
-                case 0: working.pickedscreen = 1
-                case 1: working.pickedscreen = 2
-                case 2: working.pickedscreen = 0
-                default: print("memes")
-                }
-            }
+            Storeview().tabItem{ Image(systemName: "bag.circle").resizable() }.tag(1)
+            AboutView().tabItem{ Image(systemName: "questionmark.circle.fill").resizable() }.tag(0)
+            Text("to be completed").tabItem{ Image(systemName: "cart.fill").resizable() }.tag(2)
+            
+            
         }
+        
+            
     }
-}
+        }
+    
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
