@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C45F27A6203A00D0202E /* ZVcookiesApp.swift */; };
+		CF23C46227A6203A00D0202E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C46127A6203A00D0202E /* ContentView.swift */; };
+		CF23C46427A6203B00D0202E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF23C46327A6203B00D0202E /* Assets.xcassets */; };
+		CF23C46727A6203B00D0202E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF23C46627A6203B00D0202E /* Preview Assets.xcassets */; };
+		CF23C47127A6203B00D0202E /* ZVcookiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C47027A6203B00D0202E /* ZVcookiesTests.swift */; };
+		CF23C47B27A6203B00D0202E /* ZVcookiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C47A27A6203B00D0202E /* ZVcookiesUITests.swift */; };
+		CF23C47D27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C47C27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF23C46D27A6203B00D0202E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23C45427A6203A00D0202E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF23C45B27A6203A00D0202E;
+			remoteInfo = ZVcookies;
+		};
+		CF23C47727A6203B00D0202E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF23C45427A6203A00D0202E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF23C45B27A6203A00D0202E;
+			remoteInfo = ZVcookies;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF23C45C27A6203A00D0202E /* ZVcookies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZVcookies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF23C45F27A6203A00D0202E /* ZVcookiesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZVcookiesApp.swift; sourceTree = "<group>"; };
+		CF23C46127A6203A00D0202E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF23C46327A6203B00D0202E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF23C46627A6203B00D0202E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF23C46C27A6203B00D0202E /* ZVcookiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZVcookiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF23C47027A6203B00D0202E /* ZVcookiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZVcookiesTests.swift; sourceTree = "<group>"; };
+		CF23C47627A6203B00D0202E /* ZVcookiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZVcookiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF23C47A27A6203B00D0202E /* ZVcookiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZVcookiesUITests.swift; sourceTree = "<group>"; };
+		CF23C47C27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZVcookiesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF23C45927A6203A00D0202E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23C46927A6203B00D0202E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23C47327A6203B00D0202E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF23C45327A6203A00D0202E = {
+			isa = PBXGroup;
+			children = (
+				CF23C45E27A6203A00D0202E /* ZVcookies */,
+				CF23C46F27A6203B00D0202E /* ZVcookiesTests */,
+				CF23C47927A6203B00D0202E /* ZVcookiesUITests */,
+				CF23C45D27A6203A00D0202E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF23C45D27A6203A00D0202E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C45C27A6203A00D0202E /* ZVcookies.app */,
+				CF23C46C27A6203B00D0202E /* ZVcookiesTests.xctest */,
+				CF23C47627A6203B00D0202E /* ZVcookiesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF23C45E27A6203A00D0202E /* ZVcookies */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C45F27A6203A00D0202E /* ZVcookiesApp.swift */,
+				CF23C46127A6203A00D0202E /* ContentView.swift */,
+				CF23C46327A6203B00D0202E /* Assets.xcassets */,
+				CF23C46527A6203B00D0202E /* Preview Content */,
+			);
+			path = ZVcookies;
+			sourceTree = "<group>";
+		};
+		CF23C46527A6203B00D0202E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C46627A6203B00D0202E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF23C46F27A6203B00D0202E /* ZVcookiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C47027A6203B00D0202E /* ZVcookiesTests.swift */,
+			);
+			path = ZVcookiesTests;
+			sourceTree = "<group>";
+		};
+		CF23C47927A6203B00D0202E /* ZVcookiesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C47A27A6203B00D0202E /* ZVcookiesUITests.swift */,
+				CF23C47C27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift */,
+			);
+			path = ZVcookiesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF23C45B27A6203A00D0202E /* ZVcookies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF23C48027A6203B00D0202E /* Build configuration list for PBXNativeTarget "ZVcookies" */;
+			buildPhases = (
+				CF23C45827A6203A00D0202E /* Sources */,
+				CF23C45927A6203A00D0202E /* Frameworks */,
+				CF23C45A27A6203A00D0202E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZVcookies;
+			productName = ZVcookies;
+			productReference = CF23C45C27A6203A00D0202E /* ZVcookies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF23C46B27A6203B00D0202E /* ZVcookiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF23C48327A6203B00D0202E /* Build configuration list for PBXNativeTarget "ZVcookiesTests" */;
+			buildPhases = (
+				CF23C46827A6203B00D0202E /* Sources */,
+				CF23C46927A6203B00D0202E /* Frameworks */,
+				CF23C46A27A6203B00D0202E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF23C46E27A6203B00D0202E /* PBXTargetDependency */,
+			);
+			name = ZVcookiesTests;
+			productName = ZVcookiesTests;
+			productReference = CF23C46C27A6203B00D0202E /* ZVcookiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF23C47527A6203B00D0202E /* ZVcookiesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF23C48627A6203B00D0202E /* Build configuration list for PBXNativeTarget "ZVcookiesUITests" */;
+			buildPhases = (
+				CF23C47227A6203B00D0202E /* Sources */,
+				CF23C47327A6203B00D0202E /* Frameworks */,
+				CF23C47427A6203B00D0202E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF23C47827A6203B00D0202E /* PBXTargetDependency */,
+			);
+			name = ZVcookiesUITests;
+			productName = ZVcookiesUITests;
+			productReference = CF23C47627A6203B00D0202E /* ZVcookiesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF23C45427A6203A00D0202E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CF23C45B27A6203A00D0202E = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					CF23C46B27A6203B00D0202E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CF23C45B27A6203A00D0202E;
+					};
+					CF23C47527A6203B00D0202E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CF23C45B27A6203A00D0202E;
+					};
+				};
+			};
+			buildConfigurationList = CF23C45727A6203A00D0202E /* Build configuration list for PBXProject "ZVcookies" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF23C45327A6203A00D0202E;
+			productRefGroup = CF23C45D27A6203A00D0202E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF23C45B27A6203A00D0202E /* ZVcookies */,
+				CF23C46B27A6203B00D0202E /* ZVcookiesTests */,
+				CF23C47527A6203B00D0202E /* ZVcookiesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF23C45A27A6203A00D0202E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23C46727A6203B00D0202E /* Preview Assets.xcassets in Resources */,
+				CF23C46427A6203B00D0202E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23C46A27A6203B00D0202E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23C47427A6203B00D0202E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF23C45827A6203A00D0202E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23C46227A6203A00D0202E /* ContentView.swift in Sources */,
+				CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23C46827A6203B00D0202E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23C47127A6203B00D0202E /* ZVcookiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF23C47227A6203B00D0202E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF23C47D27A6203B00D0202E /* ZVcookiesUITestsLaunchTests.swift in Sources */,
+				CF23C47B27A6203B00D0202E /* ZVcookiesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF23C46E27A6203B00D0202E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF23C45B27A6203A00D0202E /* ZVcookies */;
+			targetProxy = CF23C46D27A6203B00D0202E /* PBXContainerItemProxy */;
+		};
+		CF23C47827A6203B00D0202E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF23C45B27A6203A00D0202E /* ZVcookies */;
+			targetProxy = CF23C47727A6203B00D0202E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF23C47E27A6203B00D0202E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF23C47F27A6203B00D0202E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF23C48127A6203B00D0202E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZVcookies/Preview Content\"";
+				DEVELOPMENT_TEAM = 3KGQYCYXPG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lydess.ZVcookies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF23C48227A6203B00D0202E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ZVcookies/Preview Content\"";
+				DEVELOPMENT_TEAM = 3KGQYCYXPG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lydess.ZVcookies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF23C48427A6203B00D0202E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3KGQYCYXPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lydess.ZVcookiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZVcookies.app/ZVcookies";
+			};
+			name = Debug;
+		};
+		CF23C48527A6203B00D0202E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3KGQYCYXPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lydess.ZVcookiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZVcookies.app/ZVcookies";
+			};
+			name = Release;
+		};
+		CF23C48727A6203B00D0202E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3KGQYCYXPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lydess.ZVcookiesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZVcookies;
+			};
+			name = Debug;
+		};
+		CF23C48827A6203B00D0202E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3KGQYCYXPG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lydess.ZVcookiesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZVcookies;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF23C45727A6203A00D0202E /* Build configuration list for PBXProject "ZVcookies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23C47E27A6203B00D0202E /* Debug */,
+				CF23C47F27A6203B00D0202E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF23C48027A6203B00D0202E /* Build configuration list for PBXNativeTarget "ZVcookies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23C48127A6203B00D0202E /* Debug */,
+				CF23C48227A6203B00D0202E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF23C48327A6203B00D0202E /* Build configuration list for PBXNativeTarget "ZVcookiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23C48427A6203B00D0202E /* Debug */,
+				CF23C48527A6203B00D0202E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF23C48627A6203B00D0202E /* Build configuration list for PBXNativeTarget "ZVcookiesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF23C48727A6203B00D0202E /* Debug */,
+				CF23C48827A6203B00D0202E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF23C45427A6203A00D0202E /* Project object */;
+}
