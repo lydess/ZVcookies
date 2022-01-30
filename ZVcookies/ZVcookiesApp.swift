@@ -11,7 +11,7 @@ import SwiftUI
 struct ZVcookiesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MasterView()
         }
     }
 }

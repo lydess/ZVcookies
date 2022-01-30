@@ -6,8 +6,7 @@
 //
 
 import SwiftUI
-var hard = hardcoded()
-var uicol = Palate()
+
 struct Catalogview: View {
     var cookielist = hard.getcatalog()
     var titletext:String

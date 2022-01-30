@@ -6,15 +6,26 @@
 //
 
 import SwiftUI
-let VM = workingdata()
 
-struct ContentView: View {
+let VM = workingdata()
+let hard = hardcoded()
+let uicol = Palate()
+
+struct MasterView: View {
     @StateObject var working = VM
-    @State var tabsel = 0
     var uicol = Palate()
     var body: some View {
         VStack {
-           
+            
+            if working.pickedscreen != 0 {
+                HStack {
+                    Button("<"){working.pickedscreen = 0}
+                    .padding(.leading, 30.0)
+                    Spacer()
+                }
+            } else {
+                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+            }
             TabView(selection: $working.pickedscreen) {
                 Homeview().tag(0)
                 AboutView().tag(1)
@@ -34,6 +45,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MasterView()
     }
 }

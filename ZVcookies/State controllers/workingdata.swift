@@ -9,5 +9,6 @@ import Foundation
 import SwiftUI
 
 class workingdata: ObservableObject {
-    @Published var pickedscreen = 2
+    @Published var pickedscreen = 0
+    @Published var doshowback = false
 }

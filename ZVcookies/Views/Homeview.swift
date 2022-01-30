@@ -24,7 +24,7 @@ struct Homeview: View {
             }
             LazyVGrid(columns: newgrids) {
                 ForEach(buttonlist, id: \.pageid) {button in
-                    Text("top of the line down to bot divtom of the line").background(.red).padding()
+                    HomeButtonView(titletext: button.maintext, pageid: button.pageid)
                 }
             }
         }

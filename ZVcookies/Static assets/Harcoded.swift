@@ -48,8 +48,8 @@ class hardcoded  {
     }
     
     func gethomelayout() -> [Homebutton] {
-        let storebutton = Homebutton(pageid: 0, maintext: "What we have")
         let aboutbutton = Homebutton(pageid: 1, maintext: "About us")
+        let storebutton = Homebutton(pageid: 2, maintext: "What we have")
         
         var buttonlist = [
         storebutton,

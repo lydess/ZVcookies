@@ -14,11 +14,7 @@ struct Storeview: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Catalog").font(.system(size: 30))
-            }.padding(14.0)
-            
-            Spacer()
+           
             
             NavigationView{
             ScrollView {
