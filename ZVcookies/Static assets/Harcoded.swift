@@ -23,6 +23,10 @@ struct Homebutton{
     let maintext:String
 }
 
+struct Throwaway{
+    let uid = UUID()
+}
+
 class hardcoded  {
     func getcatalog() -> [cookiedata] {
         let cookie1 = cookiedata(pageid: 0, photo: Image(uiImage: UIImage(named: "cookie")!).resizable() , price: 10, title: "normal cookie")
@@ -57,5 +61,20 @@ class hardcoded  {
         ]
         return buttonlist
         
+    }
+    
+    func throwawayarray() -> [Throwaway] {
+        let throwaway = [
+            Throwaway(),
+            Throwaway(),
+            Throwaway(),
+            Throwaway(),
+            Throwaway(),
+            Throwaway(),
+            Throwaway(),
+            Throwaway()
+        ]
+        
+        return throwaway
     }
 }
