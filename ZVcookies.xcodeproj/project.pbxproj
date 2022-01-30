@@ -25,6 +25,7 @@
 		CF23C4A027A6505800D0202E /* workingdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49F27A6505800D0202E /* workingdata.swift */; };
 		CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4A227A6568300D0202E /* HomeButtonView.swift */; };
 		CF23C4A527A6786C00D0202E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */; };
+		CF23C4A827A6ACBC00D0202E /* Custom uIframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4A727A6ACBC00D0202E /* Custom uIframes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		CF23C49F27A6505800D0202E /* workingdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workingdata.swift; sourceTree = "<group>"; };
 		CF23C4A227A6568300D0202E /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
 		CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CF23C4A627A6A92900D0202E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CF23C4A727A6ACBC00D0202E /* Custom uIframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom uIframes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,7 @@
 		CF23C45E27A6203A00D0202E /* ZVcookies */ = {
 			isa = PBXGroup;
 			children = (
+				CF23C4A627A6A92900D0202E /* Info.plist */,
 				CF23C49E27A6504E00D0202E /* State controllers */,
 				CF23C49927A63E4D00D0202E /* temp */,
 				CF23C49427A62D4700D0202E /* Static assets */,
@@ -159,7 +163,6 @@
 				CF23C4A127A6567100D0202E /* Subview */,
 				CF23C48F27A629E900D0202E /* Storeview.swift */,
 				CF23C48927A6218100D0202E /* Aboutview.swift */,
-				CF23C49C27A64B6B00D0202E /* Homeview.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				CF23C49F27A6505800D0202E /* workingdata.swift */,
+				CF23C4A727A6ACBC00D0202E /* Custom uIframes.swift */,
 			);
 			path = "State controllers";
 			sourceTree = "<group>";
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				CF23C49727A62F4300D0202E /* Catalogview.swift */,
+				CF23C49C27A64B6B00D0202E /* Homeview.swift */,
 				CF23C4A227A6568300D0202E /* HomeButtonView.swift */,
 			);
 			path = Subview;
@@ -339,6 +344,7 @@
 				CF23C48A27A6218100D0202E /* Aboutview.swift in Sources */,
 				CF23C49027A629E900D0202E /* Storeview.swift in Sources */,
 				CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */,
+				CF23C4A827A6ACBC00D0202E /* Custom uIframes.swift in Sources */,
 				CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */,
 				CF23C48C27A622E100D0202E /* Palette.swift in Sources */,
 				CF23C4A027A6505800D0202E /* workingdata.swift in Sources */,
@@ -506,9 +512,9 @@
 				DEVELOPMENT_TEAM = 3KGQYCYXPG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZVcookies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,9 +541,9 @@
 				DEVELOPMENT_TEAM = 3KGQYCYXPG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ZVcookies/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
