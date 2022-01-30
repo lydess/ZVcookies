@@ -24,6 +24,7 @@
 		CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49C27A64B6B00D0202E /* Homeview.swift */; };
 		CF23C4A027A6505800D0202E /* workingdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49F27A6505800D0202E /* workingdata.swift */; };
 		CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4A227A6568300D0202E /* HomeButtonView.swift */; };
+		CF23C4A527A6786C00D0202E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		CF23C49C27A64B6B00D0202E /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		CF23C49F27A6505800D0202E /* workingdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workingdata.swift; sourceTree = "<group>"; };
 		CF23C4A227A6568300D0202E /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
+		CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				CF23C45F27A6203A00D0202E /* ZVcookiesApp.swift */,
 				CF23C46127A6203A00D0202E /* MasterView.swift */,
 				CF23C46527A6203B00D0202E /* Preview Content */,
+				CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */,
 			);
 			path = ZVcookies;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF23C4A527A6786C00D0202E /* Launch Screen.storyboard in Resources */,
 				CF23C46727A6203B00D0202E /* Preview Assets.xcassets in Resources */,
 				CF23C46427A6203B00D0202E /* Assets.xcassets in Resources */,
 			);

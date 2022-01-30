@@ -41,7 +41,7 @@ struct Catalogview: View {
         
         
         
-        }.padding(20).contentShape(Rectangle()).cornerRadius(40).background(uicol.primaryui)
+        }.padding(20).contentShape(Rectangle()).cornerRadius(40).background(uicol.forg)
         
     }
 }

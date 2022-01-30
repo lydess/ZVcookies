@@ -9,30 +9,9 @@ import SwiftUI
 
 struct Homeview: View {
     @StateObject var working = VM
-    let buttonlist = hard.gethomelayout()
-    let data  = (1...5).map { "item \($0)" }
-    var newgrids = [
-        GridItem(.flexible(minimum: 1, maximum: 600)),
-        GridItem(.flexible(minimum: 1, maximum: 600))
-    ]
+    
     var body: some View {
-        VStack {
-            if working.pickedscreen == 1 {
-                Text("its a me")
-            } else {
-                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
-            }
-            LazyVGrid(columns: newgrids) {
-                ForEach(buttonlist, id: \.pageid) {button in
-                    HomeButtonView(titletext: button.maintext, pageid: button.pageid)
-                        .padding(.top, 50.0)
-                }
-               
-                
-                
-            }
-            Spacer()
-        }
+       Text("hello swift")
     }
 }
 

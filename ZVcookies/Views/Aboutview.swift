@@ -10,15 +10,19 @@ import SwiftUI
 
 struct AboutView: View {
     var uicol = Palate()
-    var aboutcontent = staticassets()
+  
    
     var body: some View {
         VStack{
-            ScrollView {
-                Button("tap me"){
-                    print()
-                }
+            NavigationView{
+            List{
+                NavigationLink(destination: {Text("r")}, label: {Text("Shipping information")})
+                NavigationLink(destination: {Text("r")}, label: {Text("About us")})
+                NavigationLink(destination: {Text("r")}, label: {Text("Diet and Nutrition information")})
+                NavigationLink(destination: {Text("r")}, label: {Text("Contact us")})
             }
+            }
+            
         }
     }
 }

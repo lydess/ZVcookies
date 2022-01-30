@@ -10,9 +10,11 @@ import SwiftUI
 
 struct staticassets {
     var aboutmain:String
+   
     
     init() {
         aboutmain = "Welcome to my cookies store, herein you will find many cookies whipped up by the greatest cookie lawyer in all the land, i know of many cookie laws as this is not my first cookie law rodeo"
+        
     }
 }
 
