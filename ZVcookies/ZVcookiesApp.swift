@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ZVcookiesApp: App {
+    @Environment(\.scenePhase) var scenePhase
     var body: some Scene {
+        let persistenceController = PersistenceController.shared
         WindowGroup {
-            MasterView()
+            MasterView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-    }
+        .onChange(of: scenePhase) { _ in
+            persistenceController.save()
+        }
+}
 }

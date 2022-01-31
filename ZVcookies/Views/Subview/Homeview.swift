@@ -9,6 +9,13 @@ import SwiftUI
 
 struct Homeview: View {
     @StateObject var working = VM
+    
+    @FetchRequest(
+        entity: Product.entity(),
+        sortDescriptors: [NSSortDescriptor(key: "idnum", ascending: true)]
+    )
+    
+    var cookies: FetchedResults<Product>
     var screenwidth = UIScreen.main.bounds.width
     var screenheight = UIScreen.main.bounds.height
     var body: some View {
@@ -19,19 +26,18 @@ struct Homeview: View {
                     .font(.headline)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
-                    .padding(.leading, 20.0)
+                    .padding(.leading, 30.0)
                 
                 Spacer()
-            }
-                
-            
-            HStack{
-                Text("check out our amazing cookies")
-                   
-                Button("Lets go > "){
-                    working.pickedscreen = 1
+                Button("-"){
+                    DB.deletelast()
+                }.padding(.leading, 30.0)
+                Button("+"){
+                    DB.bakecookie()
+                    
                 }
-            }.padding(.top, 25)
+                .padding(.trailing, 30.0)
+            }
             ScrollView{
             HStack {
                 Text("Recently viewed")
@@ -42,12 +48,22 @@ struct Homeview: View {
                     .padding(.top, 25)
                 
                 Spacer()
+                
+                
             }
            
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(hard.throwawayarray(), id: \.uid ) { item in
-                        Rectangle().frame(width: 150, height: 300, alignment: .top)
+                HStack(spacing: 5.0) {
+                    ForEach(cookies, id: \.idnum ) { item in
+                        Button(action: {}, label: {
+                            HStack {
+                                Text("").frame(width: 100, height: 100, alignment: .top)
+                                    .background(.mint)
+                                
+                            }
+                                
+                        })
+                            
                     }
                 }
                 
@@ -67,7 +83,39 @@ struct Homeview: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(hard.throwawayarray(), id: \.uid ) { item in
-                            Rectangle().frame(width: 150, height: 150, alignment: .top)
+                            Button(action: {}, label: {
+                                Text("").frame(width: 100, height: 100, alignment: .top)
+                                    .background(.mint)
+                                    .cornerRadius(10)
+                                    
+                            })
+                                
+                        }
+                    }
+                    
+                }.padding()
+                
+                HStack {
+                    Text("New Arrivals")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 20.0)
+                        .padding(.top, 25)
+                    
+                    Spacer()
+                }
+               
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(hard.throwawayarray(), id: \.uid ) { item in
+                            Button(action: {}, label: {
+                                Text("").frame(width: 100, height: 100, alignment: .top)
+                                    .background(.mint)
+                                    .cornerRadius(10)
+                                    
+                            })
+                                
                         }
                     }
                     
@@ -84,4 +132,4 @@ struct Homeview_Previews: PreviewProvider {
         Homeview()
     }
 }
-//asdfasd 
+//asdfasd

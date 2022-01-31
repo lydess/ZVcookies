@@ -10,8 +10,12 @@ let assets = staticassets()
 let VM = workingdata()
 let hard = hardcoded()
 let uicol = Palate()
+let handler = PersistenceController.shared.container.viewContext
+let DB = datahandler()
 
 struct MasterView: View {
+    @Environment(\.scenePhase) var scenePhase
+    @Environment(\.managedObjectContext) var managedObjectContext
     @StateObject var working = VM
     @State var test = 0
     @State var testval = 0

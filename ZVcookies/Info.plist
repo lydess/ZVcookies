@@ -4,10 +4,17 @@
 <dict>
 	<key>UILaunchScreen</key>
 	<dict>
+		<key>UITabBar</key>
+		<dict>
+			<key>UIImageName</key>
+			<string>Unknown</string>
+		</dict>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<true/>
 		<key>UIColorName</key>
-		<string>Launch Screen</string>
+		<string>Unknown</string>
 		<key>UIImageName</key>
-		<string>Launch Screen.storyboard</string>
+		<string>Unknown</string>
 	</dict>
 </dict>
 </plist>

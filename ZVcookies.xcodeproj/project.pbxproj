@@ -26,6 +26,11 @@
 		CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4A227A6568300D0202E /* HomeButtonView.swift */; };
 		CF23C4A527A6786C00D0202E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */; };
 		CF23C4A827A6ACBC00D0202E /* Custom uIframes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4A727A6ACBC00D0202E /* Custom uIframes.swift */; };
+		CF23C4AB27A7B77200D0202E /* Data management.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4AA27A7B77200D0202E /* Data management.swift */; };
+		CF23C4AE27A7B84300D0202E /* Primary model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4AC27A7B84300D0202E /* Primary model.xcdatamodeld */; };
+		CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4AF27A7BA1A00D0202E /* DebugView.swift */; };
+		CF23C4B227A7BA7000D0202E /* Data Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4B127A7BA7000D0202E /* Data Handler.swift */; };
+		CF23C4B427A7C89600D0202E /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF23C4B327A7C89600D0202E /* Unknown.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,11 @@
 		CF23C4A427A6786C00D0202E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CF23C4A627A6A92900D0202E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CF23C4A727A6ACBC00D0202E /* Custom uIframes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom uIframes.swift"; sourceTree = "<group>"; };
+		CF23C4AA27A7B77200D0202E /* Data management.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data management.swift"; sourceTree = "<group>"; };
+		CF23C4AD27A7B84300D0202E /* Primary model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Primary model.xcdatamodel"; sourceTree = "<group>"; };
+		CF23C4AF27A7BA1A00D0202E /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		CF23C4B127A7BA7000D0202E /* Data Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Handler.swift"; sourceTree = "<group>"; };
+		CF23C4B327A7C89600D0202E /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,7 @@
 		CF23C45E27A6203A00D0202E /* ZVcookies */ = {
 			isa = PBXGroup;
 			children = (
+				CF23C4A927A7B76600D0202E /* Data */,
 				CF23C4A627A6A92900D0202E /* Info.plist */,
 				CF23C49E27A6504E00D0202E /* State controllers */,
 				CF23C49927A63E4D00D0202E /* temp */,
@@ -163,6 +174,7 @@
 				CF23C4A127A6567100D0202E /* Subview */,
 				CF23C48F27A629E900D0202E /* Storeview.swift */,
 				CF23C48927A6218100D0202E /* Aboutview.swift */,
+				CF23C4AF27A7BA1A00D0202E /* DebugView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +215,17 @@
 				CF23C4A227A6568300D0202E /* HomeButtonView.swift */,
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		CF23C4A927A7B76600D0202E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C4AA27A7B77200D0202E /* Data management.swift */,
+				CF23C4AC27A7B84300D0202E /* Primary model.xcdatamodeld */,
+				CF23C4B127A7BA7000D0202E /* Data Handler.swift */,
+				CF23C4B327A7C89600D0202E /* Unknown.jpeg */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF23C4B427A7C89600D0202E /* Unknown.jpeg in Resources */,
 				CF23C4A527A6786C00D0202E /* Launch Screen.storyboard in Resources */,
 				CF23C46727A6203B00D0202E /* Preview Assets.xcassets in Resources */,
 				CF23C46427A6203B00D0202E /* Assets.xcassets in Resources */,
@@ -336,16 +360,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF23C4AE27A7B84300D0202E /* Primary model.xcdatamodeld in Sources */,
 				CF23C49627A62D8300D0202E /* Harcoded.swift in Sources */,
 				CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */,
 				CF23C48E27A627EB00D0202E /* Staticassets.swift in Sources */,
 				CF23C49827A62F4300D0202E /* Catalogview.swift in Sources */,
 				CF23C46227A6203A00D0202E /* MasterView.swift in Sources */,
 				CF23C48A27A6218100D0202E /* Aboutview.swift in Sources */,
+				CF23C4B227A7BA7000D0202E /* Data Handler.swift in Sources */,
 				CF23C49027A629E900D0202E /* Storeview.swift in Sources */,
 				CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */,
 				CF23C4A827A6ACBC00D0202E /* Custom uIframes.swift in Sources */,
+				CF23C4AB27A7B77200D0202E /* Data management.swift in Sources */,
 				CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */,
+				CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */,
 				CF23C48C27A622E100D0202E /* Palette.swift in Sources */,
 				CF23C4A027A6505800D0202E /* workingdata.swift in Sources */,
 				CF23C49B27A63E5700D0202E /* throwaway.swift in Sources */,
@@ -675,6 +703,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF23C4AC27A7B84300D0202E /* Primary model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF23C4AD27A7B84300D0202E /* Primary model.xcdatamodel */,
+			);
+			currentVersion = CF23C4AD27A7B84300D0202E /* Primary model.xcdatamodel */;
+			path = "Primary model.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CF23C45427A6203A00D0202E /* Project object */;
 }

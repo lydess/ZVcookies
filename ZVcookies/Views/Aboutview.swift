@@ -15,11 +15,15 @@ struct AboutView: View {
     var body: some View {
         VStack{
             NavigationView{
-            List{
-                NavigationLink(destination: {Text("r")}, label: {Text("Shipping information")})
-                NavigationLink(destination: {Text("r")}, label: {Text("About us")})
-                NavigationLink(destination: {Text("r")}, label: {Text("Diet and Nutrition information")})
-                NavigationLink(destination: {Text("r")}, label: {Text("Contact us")})
+                List{
+                    Section {
+                        NavigationLink(destination: {Text("r")}, label: {Text("Shipping information")})
+                        NavigationLink(destination: {Text("r")}, label: {Text("About us")})
+                        NavigationLink(destination: {Text("r")}, label: {Text("Diet and Nutrition information")})
+                        NavigationLink(destination: {Text("r")}, label: {Text("Contact us")})
+                }
+                        NavigationLink(destination: {DebugView()}, label: {Text("Debug")})
+                
             }
             }
             
