@@ -16,6 +16,7 @@ struct Homeview: View {
     )
     
     var cookies: FetchedResults<Product>
+    var cookieurl = URL(string: "https://www.cookingclassy.com/wp-content/uploads/2014/06/chocolate-chip-cookie-16-600x868.jpg")
     var screenwidth = UIScreen.main.bounds.width
     var screenheight = UIScreen.main.bounds.height
     var body: some View {
@@ -59,6 +60,17 @@ struct Homeview: View {
                             HStack {
                                 Text("").frame(width: 100, height: 100, alignment: .top)
                                     .background(.mint)
+                                AsyncImage(
+                                                url: cookieurl,
+                                                content: { image in
+                                                    image.resizable()
+                                                         .aspectRatio(contentMode: .fit)
+                                                         .frame(maxWidth: 100, maxHeight: 100)
+                                                },
+                                                placeholder: {
+                                                    ProgressView()
+                                                }
+                                            )
                                 
                             }
                                 

@@ -72,9 +72,11 @@ class datahandler {
     }
     
     func deletelast() {
+        
         toptype.returnsObjectsAsFaults = false
         do {
             let result = try handler.fetch(toptype).last
+            
             handler.delete(result as! NSManagedObject)
         }catch{"eh"}
         
