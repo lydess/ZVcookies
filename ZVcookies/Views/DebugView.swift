@@ -6,20 +6,48 @@
 //
 
 import SwiftUI
+import Buy
 
 struct DebugView: View {
+    @State var viewstate = CGSize.zero
     var body: some View {
+        
         VStack {
-            Button("DB test"){
-                DB.getPL()
+            List {
+                Section{Button("DB test"){
+                    DB.getPL()
+                }
+                Button("DB add"){
+                    DB.bakecookie()
+                }
+                Button("DB delete"){
+                    DB.bincookies()
+                }}
+                Section{
+                    Button("Shop"){
+                        print(shop.getProductsQuery())
+                    }
+                }
+                Section{
+                    Button("card example"){
+                        print(shop.getProductsQuery())
+                    }
+                }
+                
             }
-            Button("DB add"){
-                DB.bakecookie()
-            }
-            Button("DB delete"){
-                DB.bincookies()
-            }
+            Rectangle().animation(.spring()).offset(y: viewstate.height)
+                .gesture(DragGesture()
+                            .onChanged{value in
+                                self.viewstate = value.translation
+                    
+                }
+                            .onEnded{ value in
+                                self.viewstate = value.translation
+                    
+                }
+            )
         }
+       
     }
 }
 

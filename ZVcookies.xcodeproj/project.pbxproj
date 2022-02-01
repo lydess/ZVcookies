@@ -31,6 +31,10 @@
 		CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4AF27A7BA1A00D0202E /* DebugView.swift */; };
 		CF23C4B227A7BA7000D0202E /* Data Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4B127A7BA7000D0202E /* Data Handler.swift */; };
 		CF23C4B427A7C89600D0202E /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF23C4B327A7C89600D0202E /* Unknown.jpeg */; };
+		CF23C4B727A8D58A00D0202E /* Buy in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B627A8D58A00D0202E /* Buy */; };
+		CF23C4B927A8D58A00D0202E /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B827A8D58A00D0202E /* Pay */; };
+		CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4BB27A8D65F00D0202E /* Shopify.swift */; };
+		CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA027A92AFE00A63D44 /* Detail sheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,8 @@
 		CF23C4AF27A7BA1A00D0202E /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		CF23C4B127A7BA7000D0202E /* Data Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Handler.swift"; sourceTree = "<group>"; };
 		CF23C4B327A7C89600D0202E /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
+		CF23C4BB27A8D65F00D0202E /* Shopify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
+		CF960EA027A92AFE00A63D44 /* Detail sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail sheet.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF23C4B727A8D58A00D0202E /* Buy in Frameworks */,
+				CF23C4B927A8D58A00D0202E /* Pay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +137,7 @@
 		CF23C45E27A6203A00D0202E /* ZVcookies */ = {
 			isa = PBXGroup;
 			children = (
+				CF23C4BA27A8D65300D0202E /* Networking */,
 				CF23C4A927A7B76600D0202E /* Data */,
 				CF23C4A627A6A92900D0202E /* Info.plist */,
 				CF23C49E27A6504E00D0202E /* State controllers */,
@@ -213,6 +222,7 @@
 				CF23C49727A62F4300D0202E /* Catalogview.swift */,
 				CF23C49C27A64B6B00D0202E /* Homeview.swift */,
 				CF23C4A227A6568300D0202E /* HomeButtonView.swift */,
+				CF960EA027A92AFE00A63D44 /* Detail sheet.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -226,6 +236,14 @@
 				CF23C4B327A7C89600D0202E /* Unknown.jpeg */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		CF23C4BA27A8D65300D0202E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CF23C4BB27A8D65F00D0202E /* Shopify.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +262,10 @@
 			dependencies = (
 			);
 			name = ZVcookies;
+			packageProductDependencies = (
+				CF23C4B627A8D58A00D0202E /* Buy */,
+				CF23C4B827A8D58A00D0202E /* Pay */,
+			);
 			productName = ZVcookies;
 			productReference = CF23C45C27A6203A00D0202E /* ZVcookies.app */;
 			productType = "com.apple.product-type.application";
@@ -316,6 +338,9 @@
 				Base,
 			);
 			mainGroup = CF23C45327A6203A00D0202E;
+			packageReferences = (
+				CF23C4B527A8D58A00D0202E /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */,
+			);
 			productRefGroup = CF23C45D27A6203A00D0202E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF23C4AE27A7B84300D0202E /* Primary model.xcdatamodeld in Sources */,
+				CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */,
 				CF23C49627A62D8300D0202E /* Harcoded.swift in Sources */,
 				CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */,
 				CF23C48E27A627EB00D0202E /* Staticassets.swift in Sources */,
@@ -368,6 +394,7 @@
 				CF23C46227A6203A00D0202E /* MasterView.swift in Sources */,
 				CF23C48A27A6218100D0202E /* Aboutview.swift in Sources */,
 				CF23C4B227A7BA7000D0202E /* Data Handler.swift in Sources */,
+				CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */,
 				CF23C49027A629E900D0202E /* Storeview.swift in Sources */,
 				CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */,
 				CF23C4A827A6ACBC00D0202E /* Custom uIframes.swift in Sources */,
@@ -703,6 +730,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF23C4B527A8D58A00D0202E /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Shopify/mobile-buy-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF23C4B627A8D58A00D0202E /* Buy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF23C4B527A8D58A00D0202E /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
+			productName = Buy;
+		};
+		CF23C4B827A8D58A00D0202E /* Pay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF23C4B527A8D58A00D0202E /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
+			productName = Pay;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CF23C4AC27A7B84300D0202E /* Primary model.xcdatamodeld */ = {

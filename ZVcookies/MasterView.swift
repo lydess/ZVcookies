@@ -12,6 +12,7 @@ let hard = hardcoded()
 let uicol = Palate()
 let handler = PersistenceController.shared.container.viewContext
 let DB = datahandler()
+let shop = shopify()
 
 struct MasterView: View {
     @Environment(\.scenePhase) var scenePhase
