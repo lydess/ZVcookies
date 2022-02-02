@@ -9,6 +9,8 @@ import SwiftUI
 import Buy
 
 struct DebugView: View {
+    @State var doshow = false
+    @State var title = "product name"
     @State var viewstate = CGSize.zero
     var body: some View {
         
@@ -25,17 +27,36 @@ struct DebugView: View {
                 }}
                 Section{
                     Button("Shop"){
-                        print(shop.getProductsQuery())
+                        doshow.toggle()
+                    }
+                    Button("example"){
+                        shop.example()
+                    }
+                    Button("get all products"){
+                       
+                    }.task {
+                        await print(shop.getProductslist())
                     }
                 }
                 Section{
                     Button("card example"){
-                        print(shop.getProductsQuery())
+                        ProductPageView(title: "me", price: "you")
                     }
                 }
                 
             }
-            Rectangle().animation(.spring()).offset(y: viewstate.height)
+            if doshow == true {
+                ProgressView().task {
+                    do{  await shop.getProductsQuery()}
+                    catch{print("it died")}
+                }
+            } else {
+                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+            }
+            Text(title)
+            Rectangle()
+                .frame(width: 20.0, height: 20.0)
+                .animation(.spring()).offset(y: viewstate.height)
                 .gesture(DragGesture()
                             .onChanged{value in
                                 self.viewstate = value.translation

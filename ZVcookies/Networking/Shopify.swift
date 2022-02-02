@@ -14,90 +14,127 @@ class shopify {
     
     func example() {
        
-        let tquery = Storefront.buildQuery { $0
-                .collections(first: 10, query: "bickies"){ $0
-                
-                }
-        }
         
-        let query = Storefront.buildQuery { $0
-            .shop { $0
-                .name()
-               
-                .refundPolicy { $0
+        
+        let getoneproduct = Storefront.buildQuery { $0
+            .node(id: GraphQL.ID(rawValue: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3MDMzMzI1NTY4NjE=")) { $0
+                .onProduct { $0
+                    
+                
                     .title()
-                    .url()
+                    
                 }
-                .primaryDomain{$0
-                .url()
+                    
                 }
             }
-        }
         
-        let task = client.queryGraphWith(tquery) { response, error in
-            let name = response?.collections
-            print(name)
+        let task = client.queryGraphWith(getoneproduct) { response, error in
+            let name = response?.node as! Storefront.Product
+            print(name.title)
         }
+        task.resume()
         
        
 
     }
     
-    func getProductsQuery(){
-           
-           let query = Storefront.buildQuery { $0
-                   .collections(first: 10) { $0
-                       .edges { $0
-                           .node { $0
-                               .id()
-                               .title()
-                               .products(first: 20) { $0
-                                   .edges { $0
-                                       .node { $0
-                                           .id()
-                                           .title()
-                                           .description()
-                                           .availableForSale()
-                                           .priceRange { $0
-                                               .maxVariantPrice { $0
-                                                   .amount()
-                                               }
-                                           }
-                                           .images(first: 1) { $0
-                                               .edges { $0
-                                                   .node { $0
-                                                       .originalSrc()
-                                                   }
-                                               }
-                                           }
-                                           .variants(first: 10) { $0
-                                               .edges() { $0
-                                                   .node() { $0
-                                                       .id()
-                                                       .title()
-                                                       .availableForSale()
-                                                       .currentlyNotInStock()
-                                                       .product { $0
-                                                           .title()
-                                                       }
-                                                       .priceV2 { $0
-                                                           .amount()
-                                                       }
-                                                   }
-                                               }
-                                           }
-                                       }
-                                   }
-                               }
-                           }
-                       }
-                   }
-               
-           }
-        let task = client.queryGraphWith(query) { response, error in
-            let name = response?.products
-            print(name)
+    func getProductslist() async -> URL {
+        var fina1l = URL(string: "74081")
+        let getallproducts = Storefront.buildQuery { $0
+                .products(first: 10) { $0
+                .edges { $0
+                .node { $0
+                .id()
+                .title()
+                .images(first: 10) { $0
+                                .edges { $0
+                                    .node { $0
+                                        .id()
+                                        .url()
+                                        
+                                        }
+                                    }
+                                }
+                }
+                }
+                }
+                
+            }
+        
+        let task = await client.queryGraphWith(getallproducts) { response, error in
+            let name = response?.products.edges
+            
+            for x in name! {
+                var me = x.node.title
+                for i in x.node.images.edges {
+                    workingdata.takeback = i.node.url
+                    print("workingdata saved!")
+                    
+                    
+                }
+                
+            }
+            
+            
         }
-       }
-   }
+        task.resume()
+    
+        return fina1l!
 
+        
+    }
+    
+    func getProductsQuery() async -> GraphQL.ID {
+        var me = GraphQL.ID(rawValue: "")
+        let query = Storefront.buildQuery { $0
+                .products(first: 10) { $0
+                .edges() { $0
+                    .node() { $0
+                        .id()
+                        .title()
+                        .images(first: 10) { $0
+                                        .edges { $0
+                                            .node { $0
+                                                .id()
+                                                .src()
+                                            }
+                                        }
+                                    }
+                       
+                        
+                    }
+                }
+                }
+            }
+        let task = client.queryGraphWith(query) { response, error in
+            let name = response?.products.edges[0].node.id
+            print(name!)
+            me = name!
+            
+           
+            
+        }
+        task.resume()
+        return me
+        
+       }
+    
+}
+
+
+/*
+ {
+   products(first: 10) {
+     edges {
+       node {
+         id
+         title
+         handle
+        
+         
+         
+       }
+     }
+   }
+ }
+ */

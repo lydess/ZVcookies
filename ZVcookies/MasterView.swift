@@ -20,6 +20,8 @@ struct MasterView: View {
     @StateObject var working = VM
     @State var test = 0
     @State var testval = 0
+    @State var startupcomplete = false
+    @State var isfetching = false
     init() {
         // UITabBar.appearance().isTranslucent = false
         // UITabBar.appearance().backgroundColor = .secondaryLabel
@@ -31,14 +33,37 @@ struct MasterView: View {
     var uicol = Palate()
     var body: some View {
         
-        TabView(selection: $working.pickedscreen) {
-            
-            Homeview().tabItem{ Image(systemName: "house")}.tag(3).animation(.easeOut, value: working.pickedscreen)
-            Storeview().tabItem{ Image(systemName: "bag.circle").resizable() }.tag(1).animation(.easeOut, value: working.pickedscreen)
-            Text("to be completed").tabItem{ Image(systemName: "cart").resizable() }.tag(2).animation(.easeOut, value: working.pickedscreen)
-            AboutView().tabItem{ Image(systemName: "questionmark.circle.fill").symbolRenderingMode(.palette) }.tag(0).animation(.easeOut, value: working.pickedscreen)
-            
-            
+        VStack {
+            if startupcomplete == true {
+                TabView(selection: $working.pickedscreen) {
+                
+                Homeview().tabItem{ Image(systemName: "house")}.tag(3).animation(.easeOut, value: working.pickedscreen)
+                Storeview().tabItem{ Image(systemName: "bag.circle").resizable() }.tag(1)
+                Text("to be completed").tabItem{ Image(systemName: "cart").resizable() }.tag(2).animation(.easeOut, value: working.pickedscreen)
+                AboutView().tabItem{ Image(systemName: "questionmark.circle.fill").symbolRenderingMode(.palette) }.tag(0).animation(.easeOut, value: working.pickedscreen)
+                
+                
+                }
+            } else {
+                Button("Begin the api"){
+                    isfetching = true
+                }
+                    
+                
+                
+            }
+            if isfetching == true {
+                ProgressView().task {
+                    do {await shop.getProductslist()
+                        isfetching = false
+                        startupcomplete = true
+                    }
+                    catch {print("login failed")}
+                    
+                }
+            } else {
+                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+            }
         }
       
         

@@ -25,25 +25,22 @@ struct Storeview: View {
                     Spacer()
                 }.padding(.leading, 20)
                 ForEach(cookielist, id: \.uid) {cookie in
-                    NavigationLink(tag: cookie.pageid, selection: $selectedcookie, destination: {Text("memes")}, label: {Catalogview(titletext: cookie.title, pricetext: "$" + "\(cookie.price)").cornerRadius(20)})
-                    
+                    NavigationLink(tag: cookie.pageid, selection: $selectedcookie, destination: {ProductPageView(title: "sss", price: "sss")}, label: {Catalogview(titletext: cookie.title, pricetext: "$" + "\(cookie.price)").cornerRadius(20)})
+                  
                 }
-                HStack {
-                    Text("Custom cookies")
-                    Button("sheet test"){
-                        showcustom.toggle()
-                    }.sheet(isPresented: $showcustom){
-                        Detail_sheet()
-                    }
-                    Spacer()
-                }.padding(.leading,20)
-                    .padding(.top,50)
+                // HStack {
+               //     Text("Custom cookies")
+               //     Button("sheet test"){
+               //         showcustom.toggle()
+               //     }.sheet(isPresented: $showcustom){
+               //         Detail_sheet()
+               //     }
+               //     Spacer()
+               // }.padding(.leading,20)
+                  //  .padding(.top,50)
                 
-                ForEach(cookielist, id: \.uid) {cookie in
-                    NavigationLink(tag: cookie.pageid, selection: $selectedcookie, destination: {Text("memes")}, label: {Catalogview(titletext: cookie.title, pricetext: "$" + "\(cookie.price)").cornerRadius(20)})
-                    
-                }
-            }.background( )
+                
+            }
             }.buttonStyle(.plain)
             
             

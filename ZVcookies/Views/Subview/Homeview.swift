@@ -61,7 +61,7 @@ struct Homeview: View {
                                 Text("").frame(width: 100, height: 100, alignment: .top)
                                     .background(.mint)
                                 AsyncImage(
-                                                url: cookieurl,
+                                    url: workingdata.takeback,
                                                 content: { image in
                                                     image.resizable()
                                                          .aspectRatio(contentMode: .fit)

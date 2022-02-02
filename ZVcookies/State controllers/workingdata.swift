@@ -11,6 +11,6 @@ import SwiftUI
 class workingdata: ObservableObject {
     @Published var pickedscreen = 3
     @Published var doshowback = false
-    
+    static var takeback = URL(string: "ddd")
     
 }

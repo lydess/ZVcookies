@@ -35,6 +35,7 @@
 		CF23C4B927A8D58A00D0202E /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B827A8D58A00D0202E /* Pay */; };
 		CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4BB27A8D65F00D0202E /* Shopify.swift */; };
 		CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA027A92AFE00A63D44 /* Detail sheet.swift */; };
+		CF960EA327A949C900A63D44 /* ProductPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA227A949C900A63D44 /* ProductPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		CF23C4B327A7C89600D0202E /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
 		CF23C4BB27A8D65F00D0202E /* Shopify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		CF960EA027A92AFE00A63D44 /* Detail sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail sheet.swift"; sourceTree = "<group>"; };
+		CF960EA227A949C900A63D44 /* ProductPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				CF23C49C27A64B6B00D0202E /* Homeview.swift */,
 				CF23C4A227A6568300D0202E /* HomeButtonView.swift */,
 				CF960EA027A92AFE00A63D44 /* Detail sheet.swift */,
+				CF960EA227A949C900A63D44 /* ProductPageView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				CF23C49627A62D8300D0202E /* Harcoded.swift in Sources */,
 				CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */,
 				CF23C48E27A627EB00D0202E /* Staticassets.swift in Sources */,
+				CF960EA327A949C900A63D44 /* ProductPageView.swift in Sources */,
 				CF23C49827A62F4300D0202E /* Catalogview.swift in Sources */,
 				CF23C46227A6203A00D0202E /* MasterView.swift in Sources */,
 				CF23C48A27A6218100D0202E /* Aboutview.swift in Sources */,
