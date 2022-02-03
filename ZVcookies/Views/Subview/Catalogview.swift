@@ -31,7 +31,7 @@ struct Catalogview: View {
                         
                 }.multilineTextAlignment(.leading)
                 Spacer()
-                Image(uiImage: UIImage(named: "cookie")!).resizable().frame(width: 60, height: 40, alignment: .trailing)
+                AsyncImage(url: workingdata.takeback).frame(width: 60, height: 40, alignment: .trailing)
             }.frame(width: 300, height: 40, alignment: .leading)
             
         

@@ -47,6 +47,8 @@ struct MasterView: View {
             } else {
                 Button("Begin the api"){
                     isfetching = true
+                    
+                    
                 }
                     
                 

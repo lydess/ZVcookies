@@ -60,23 +60,14 @@ struct Homeview: View {
                             HStack {
                                 Text("").frame(width: 100, height: 100, alignment: .top)
                                     .background(.mint)
-                                AsyncImage(
-                                    url: workingdata.takeback,
-                                                content: { image in
-                                                    image.resizable()
-                                                         .aspectRatio(contentMode: .fit)
-                                                         .frame(maxWidth: 100, maxHeight: 100)
-                                                },
-                                                placeholder: {
-                                                    ProgressView()
-                                                }
-                                            )
+                                
                                 
                             }
                                 
                         })
                             
                     }
+                    
                 }
                 
             }
