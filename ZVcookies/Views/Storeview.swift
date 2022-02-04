@@ -21,37 +21,17 @@ struct Storeview: View {
             NavigationView{
             ScrollView {
                 HStack {
-                    Text("Pattern Cookies")
-                    Spacer()
+                    Text("Our Cookies")
                 }.padding(.leading, 20)
-                ForEach(cookielist, id: \.uid) {cookie in
-                    NavigationLink(tag: cookie.pageid, selection: $selectedcookie, destination: {ProductPageView(title: "sss", price: "sss")}, label: {Catalogview(titletext: cookie.title, pricetext: "$" + "\(cookie.price)").cornerRadius(20)})
+                ForEach(workingdata.activeproducts, id: \.pid) {cookie in
+                    NavigationLink(tag: cookie.cellid, selection: $selectedcookie, destination: {ProductPageView(title: cookie.title, price: cookie.price)}, label: {Catalogview(titletext: cookie.title, pricetext: cookie.price, asyncurl: cookie.imageurl).cornerRadius(20)})
                   
                 }
-                // HStack {
-               //     Text("Custom cookies")
-               //     Button("sheet test"){
-               //         showcustom.toggle()
-               //     }.sheet(isPresented: $showcustom){
-               //         Detail_sheet()
-               //     }
-               //     Spacer()
-               // }.padding(.leading,20)
-                  //  .padding(.top,50)
-                
-                
+             
             }
             }.buttonStyle(.plain)
             
             
-            
-//            Spacer()
-            
-//            HStack{
-//                Button("selected state"){
-//                    print(selectedcookie)
-//                }
-//           }
         }
     }
 }

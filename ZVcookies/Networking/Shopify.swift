@@ -124,14 +124,24 @@ class shopify {
         
        }
     
-    func getProductslistTEST() async {
+    func GetShopifyProducts() async {
        
         let getallproducts = Storefront.buildQuery { $0
                 .products(first: 10) { $0
                 .edges { $0
                 .node { $0
+                .variants(first: 1) { $0
+                .edges { $0
+                .node { $0
+                .price()
+               
+                }
+                }
+                }
                 .id()
+            
                 .title()
+
                 .images(first: 10) { $0
                                 .edges { $0
                                     .node { $0
@@ -142,25 +152,33 @@ class shopify {
                                     }
                                 }
                 }
+                    
                 }
+                    
                 }
                 
             }
         
         let task = await client.queryGraphWith(getallproducts) { response, error in
             let name = response?.products.edges
-            
+            var cellcount = 0
             for x in name! {
                 var title = x.node.title
                 var prodid = x.node.id
                 var imageurl = URL(string: "")
+                var pricedec = Decimal(1)
                 for image in x.node.images.edges {
                     imageurl = image.node.url
+                    
                 }
-                var newproudct = storeproduct(title: title, pid: prodid, price: "", imageurl: imageurl!)
+                for vari in x.node.variants.edges{
+                    pricedec = vari.node.price
+                    
+                }
+                var newproudct = storeproduct(title: title, pid: prodid, price: pricedec, imageurl: imageurl!, cellid: cellcount)
                 print("Newproduct generated: " + title + " \(prodid) " + "\(imageurl!)")
                 workingdata.activeproducts.append(newproudct)
-                
+                cellcount += 1
             }
             print("contents of active products" + "\(workingdata.activeproducts.debugDescription)")
             

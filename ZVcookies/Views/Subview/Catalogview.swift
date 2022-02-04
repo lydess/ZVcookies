@@ -10,7 +10,9 @@ import SwiftUI
 struct Catalogview: View {
     var cookielist = hard.getcatalog()
     var titletext:String
-    var pricetext:String
+    var pricetext:Decimal
+    var asyncurl:URL
+    
    
     
     var body: some View {
@@ -23,7 +25,7 @@ struct Catalogview: View {
                         Spacer()
                     }.padding([.top, .bottom, .trailing])
                     HStack {
-                        Text(pricetext)
+                        Text("\(pricetext.description)")
                         Spacer()
                     }
                     .padding(.bottom)
@@ -31,8 +33,21 @@ struct Catalogview: View {
                         
                 }.multilineTextAlignment(.leading)
                 Spacer()
-                AsyncImage(url: workingdata.takeback).frame(width: 60, height: 40, alignment: .trailing)
-            }.frame(width: 300, height: 40, alignment: .leading)
+                
+                AsyncImage(url: asyncurl) { image in
+                       image
+                           .resizable()
+                           .scaledToFill()
+                   } placeholder: {
+                       ProgressView()
+                   }
+                   .frame(width: 66, height: 66)
+                   .background(Color.gray)
+                   .clipShape(Circle())
+                    
+                }
+                    
+            }.frame(width: 300, height: 40, alignment: .leading).padding(20).contentShape(Rectangle()).cornerRadius(40).background(uicol.forg)
             
         
         
@@ -41,13 +56,13 @@ struct Catalogview: View {
         
         
         
-        }.padding(20).contentShape(Rectangle()).cornerRadius(40).background(uicol.forg)
+        }
         
     }
-}
+
 
 struct Catalogview_Previews: PreviewProvider {
     static var previews: some View {
-        Catalogview(titletext: "testtext", pricetext: "50")
+        Catalogview(titletext: "testtext", pricetext: Decimal(1), asyncurl: workingdata.activeproducts[0].imageurl)
     }
 }

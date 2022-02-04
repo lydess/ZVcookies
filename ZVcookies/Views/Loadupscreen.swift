@@ -16,7 +16,7 @@ struct LoadupView: View {
             if doshow == false{
         Text("zoeh").task {
             do {
-            await shop.getProductslistTEST()
+            await shop.GetShopifyProducts()
                 doshow.toggle()
             }
             catch{print("it failed")}

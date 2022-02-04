@@ -31,8 +31,9 @@ struct Throwaway{
 struct storeproduct {
     var title:String
     var pid:GraphQL.ID
-    var price:String
+    var price:Decimal
     var imageurl:URL
+    var cellid:Int
     
 }
 

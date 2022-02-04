@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductPageView: View {
     @State var showpopover = false
     var title:String
-    var price:String
+    var price:Decimal
     var imgurl = URL(string: "https://www.instagram.com/p/CZG_P4iJ4Np/")
     var body: some View {
         ZStack {
@@ -37,6 +37,6 @@ struct ProductPageView: View {
 
 struct ProductPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductPageView(title: "example title", price: "30")
+        ProductPageView(title: "example title", price: Decimal(1))
     }
 }
