@@ -22,12 +22,12 @@ struct Storeview: View {
                     Text("Our Cookies")
                 }.padding(.leading, 20)
                 ForEach(workingdata.activeproducts, id: \.pid) {cookie in
-                    NavigationLink(tag: cookie.cellid, selection: $selectedcookie, destination: {ProductPageView(title: cookie.title, price: cookie.price, product: cookie)}, label: {Catalogview(titletext: cookie.title, pricetext: cookie.price, asyncurl: cookie.imageurl).cornerRadius(20)})
+                    NavigationLink(tag: cookie.cellid, selection: $selectedcookie, destination: {ProductPageView(title: cookie.title, price: cookie.price, product: cookie)}, label: {Catalogview(titletext: cookie.title, pricetext: cookie.price, asyncurl: cookie.imageurl).cornerRadius(20)}).navigationBarHidden(true).navigationBarBackButtonHidden(true).statusBar(hidden: true)
                   
                 }
              
             }
-            }.buttonStyle(.plain)
+            }.buttonStyle(.plain).navigationBarHidden(true).navigationBarBackButtonHidden(true)
             
             
         }

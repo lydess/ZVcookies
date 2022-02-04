@@ -9,6 +9,7 @@ import SwiftUI
 import Buy
 
 struct ProductPageView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var showpopover = false
     var title:String
     var price:Decimal
@@ -16,15 +17,24 @@ struct ProductPageView: View {
 
     var imgurl = URL(string: "https://www.instagram.com/p/CZG_P4iJ4Np/")
     var body: some View {
+       
         ZStack {
+            
             VStack {
                 Text("").frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).background(.white)
                 
             }
             VStack {
-                Text("").frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height, alignment: .top).background(uicol.forg.opacity(0.7))
+                VStack{
+                    HStack {
+                        Button("<"){presentationMode.wrappedValue.dismiss()}.padding(.top, 40.0).padding(.leading,20)
+                        Spacer()
+                    }
+                }.frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height, alignment: .top).background(uicol.forg.opacity(0.7))
             }
+            
             VStack {
+                
                 AsyncImage(url: product.imageurl) { image in
                        image
                            .resizable()
@@ -41,6 +51,7 @@ struct ProductPageView: View {
                 
                 Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {Text("ohai")})
                 Button("Customizations"){showpopover.toggle()}
+                
                 Text("Ingredients")
                 Button(action: {},
                        label: {
@@ -55,7 +66,9 @@ struct ProductPageView: View {
                 })
                 
                 
-            }
+            }.navigationBarBackButtonHidden(true)
+            
+            
         }
         
     }
