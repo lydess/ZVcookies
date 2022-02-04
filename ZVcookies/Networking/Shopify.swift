@@ -9,6 +9,11 @@ import Foundation
 import Buy
 import Pay
 
+struct shopitem {
+    var imgurl:String
+    var title:String
+    var price:String
+}
 class shopify {
     let client = Graph.Client(shopDomain: "storeofthedank.myshopify.com", apiKey: "af69a8e6ea84ae4f9c42c5f57ab650b6")
     
@@ -118,6 +123,54 @@ class shopify {
         return me
         
        }
+    
+    func getProductslistTEST() async {
+       
+        let getallproducts = Storefront.buildQuery { $0
+                .products(first: 10) { $0
+                .edges { $0
+                .node { $0
+                .id()
+                .title()
+                .images(first: 10) { $0
+                                .edges { $0
+                                    .node { $0
+                                        .id()
+                                        .url()
+                                        
+                                        }
+                                    }
+                                }
+                }
+                }
+                }
+                
+            }
+        
+        let task = await client.queryGraphWith(getallproducts) { response, error in
+            let name = response?.products.edges
+            
+            for x in name! {
+                var title = x.node.title
+                var prodid = x.node.id
+                var imageurl = URL(string: "")
+                for image in x.node.images.edges {
+                    imageurl = image.node.url
+                }
+                var newproudct = storeproduct(title: title, pid: prodid, price: "", imageurl: imageurl!)
+                print("Newproduct generated: " + title + " \(prodid) " + "\(imageurl!)")
+                workingdata.activeproducts.append(newproudct)
+                
+            }
+            print("contents of active products" + "\(workingdata.activeproducts.debugDescription)")
+            
+        }
+        task.resume()
+    
+       
+
+        
+    }
     
 }
 

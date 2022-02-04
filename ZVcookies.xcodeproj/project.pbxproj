@@ -36,6 +36,7 @@
 		CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4BB27A8D65F00D0202E /* Shopify.swift */; };
 		CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA027A92AFE00A63D44 /* Detail sheet.swift */; };
 		CF960EA327A949C900A63D44 /* ProductPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA227A949C900A63D44 /* ProductPageView.swift */; };
+		CFE5883127ABAF9E005B7A2F /* Loadupscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5883027ABAF9E005B7A2F /* Loadupscreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CF23C4BB27A8D65F00D0202E /* Shopify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		CF960EA027A92AFE00A63D44 /* Detail sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail sheet.swift"; sourceTree = "<group>"; };
 		CF960EA227A949C900A63D44 /* ProductPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageView.swift; sourceTree = "<group>"; };
+		CFE5883027ABAF9E005B7A2F /* Loadupscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Loadupscreen.swift; path = ZVcookies/Views/Loadupscreen.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				CF23C4A227A6568300D0202E /* HomeButtonView.swift */,
 				CF960EA027A92AFE00A63D44 /* Detail sheet.swift */,
 				CF960EA227A949C900A63D44 /* ProductPageView.swift */,
+				CFE5883027ABAF9E005B7A2F /* Loadupscreen.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				CF23C4AB27A7B77200D0202E /* Data management.swift in Sources */,
 				CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */,
 				CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */,
+				CFE5883127ABAF9E005B7A2F /* Loadupscreen.swift in Sources */,
 				CF23C48C27A622E100D0202E /* Palette.swift in Sources */,
 				CF23C4A027A6505800D0202E /* workingdata.swift in Sources */,
 				CF23C49B27A63E5700D0202E /* throwaway.swift in Sources */,

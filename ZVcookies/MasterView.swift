@@ -34,7 +34,7 @@ struct MasterView: View {
     var body: some View {
         
         VStack {
-            if startupcomplete == true {
+           
                 TabView(selection: $working.pickedscreen) {
                 
                 Homeview().tabItem{ Image(systemName: "house")}.tag(3).animation(.easeOut, value: working.pickedscreen)
@@ -44,19 +44,10 @@ struct MasterView: View {
                 
                 
                 }
-            } else {
-                Button("Begin the api"){
-                    isfetching = true
-                    
-                    
-                }
-                    
-                
-                
-            }
+            
             if isfetching == true {
                 ProgressView().task {
-                    do {await shop.getProductslist()
+                    do { await shop.getProductslist()
                         isfetching = false
                         startupcomplete = true
                     }

@@ -30,10 +30,6 @@ class datahandler {
             }
            final = result
             
-            
-            
-            
-            
         }
         
         catch{print("shes fucked mate")}
@@ -42,13 +38,13 @@ class datahandler {
     
     func bakecookie() {
         toptype.returnsObjectsAsFaults = false
-        for x in 0...0 {
+        for _ in 0...0 {
         let rawcookie: Product = Product.init(context: handler)
         rawcookie.descrip = "example cook"
         rawcookie.price = "210 dollary dos"
         rawcookie.name = "funny cookie"
-        var currentid = getPL().last as! Product
-        var newone = currentid.idnum
+        let currentid = getPL().last as! Product
+        let newone = currentid.idnum
             
         rawcookie.idnum = Int32(newone + 1)
             
@@ -63,7 +59,7 @@ class datahandler {
         do {
             let result = try handler.fetch(toptype)
             for x in result {
-                var deets = x as! NSManagedObject
+                let deets = x as! NSManagedObject
                 handler.delete(deets)
                 
             }

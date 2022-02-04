@@ -7,7 +7,8 @@
 
 import Foundation
 import SwiftUI
-
+import Buy
+import Pay
 
 struct cookiedata{
     let uid = UUID()
@@ -25,6 +26,14 @@ struct Homebutton{
 
 struct Throwaway{
     let uid = UUID()
+}
+
+struct storeproduct {
+    var title:String
+    var pid:GraphQL.ID
+    var price:String
+    var imageurl:URL
+    
 }
 
 class hardcoded  {

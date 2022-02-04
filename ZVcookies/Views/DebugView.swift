@@ -10,6 +10,7 @@ import Buy
 
 struct DebugView: View {
     @State var doshow = false
+    @State var fetching = false
     @State var title = "product name"
     @State var viewstate = CGSize.zero
     var body: some View {
@@ -29,13 +30,21 @@ struct DebugView: View {
                     Button("Shop"){
                         doshow.toggle()
                     }
-                    Button("example"){
-                        shop.example()
+                    Button("Get products test"){
+                        fetching.toggle()
                     }
                     Button("get all products"){
                        
                     }.task {
                         await print(shop.getProductslist())
+                    }
+                    if fetching == true {
+                        ProgressView("").progressViewStyle(.circular).task {
+                            do{await shop.getProductslistTEST()
+                                fetching.toggle()
+                            }
+                            catch{}
+                        }
                     }
                 }
                 Section{

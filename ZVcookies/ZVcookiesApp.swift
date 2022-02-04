@@ -13,7 +13,7 @@ struct ZVcookiesApp: App {
     var body: some Scene {
         let persistenceController = PersistenceController.shared
         WindowGroup {
-            MasterView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            LoadupView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         .onChange(of: scenePhase) { _ in
             persistenceController.save()
