@@ -20,7 +20,6 @@
 		CF23C49027A629E900D0202E /* Storeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C48F27A629E900D0202E /* Storeview.swift */; };
 		CF23C49627A62D8300D0202E /* Harcoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49527A62D8300D0202E /* Harcoded.swift */; };
 		CF23C49827A62F4300D0202E /* Catalogview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49727A62F4300D0202E /* Catalogview.swift */; };
-		CF23C49B27A63E5700D0202E /* throwaway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49A27A63E5700D0202E /* throwaway.swift */; };
 		CF23C49D27A64B6B00D0202E /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49C27A64B6B00D0202E /* Homeview.swift */; };
 		CF23C4A027A6505800D0202E /* workingdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C49F27A6505800D0202E /* workingdata.swift */; };
 		CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4A227A6568300D0202E /* HomeButtonView.swift */; };
@@ -73,7 +72,6 @@
 		CF23C48F27A629E900D0202E /* Storeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storeview.swift; sourceTree = "<group>"; };
 		CF23C49527A62D8300D0202E /* Harcoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harcoded.swift; sourceTree = "<group>"; };
 		CF23C49727A62F4300D0202E /* Catalogview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalogview.swift; sourceTree = "<group>"; };
-		CF23C49A27A63E5700D0202E /* throwaway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = throwaway.swift; sourceTree = "<group>"; };
 		CF23C49C27A64B6B00D0202E /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
 		CF23C49F27A6505800D0202E /* workingdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workingdata.swift; sourceTree = "<group>"; };
 		CF23C4A227A6568300D0202E /* HomeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonView.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				CF23C4A927A7B76600D0202E /* Data */,
 				CF23C4A627A6A92900D0202E /* Info.plist */,
 				CF23C49E27A6504E00D0202E /* State controllers */,
-				CF23C49927A63E4D00D0202E /* temp */,
 				CF23C49427A62D4700D0202E /* Static assets */,
 				CF23C49327A62D3B00D0202E /* Views */,
 				CF23C45F27A6203A00D0202E /* ZVcookiesApp.swift */,
@@ -201,14 +198,6 @@
 				CF23C49527A62D8300D0202E /* Harcoded.swift */,
 			);
 			path = "Static assets";
-			sourceTree = "<group>";
-		};
-		CF23C49927A63E4D00D0202E /* temp */ = {
-			isa = PBXGroup;
-			children = (
-				CF23C49A27A63E5700D0202E /* throwaway.swift */,
-			);
-			path = temp;
 			sourceTree = "<group>";
 		};
 		CF23C49E27A6504E00D0202E /* State controllers */ = {
@@ -411,7 +400,6 @@
 				CFE5883127ABAF9E005B7A2F /* Loadupscreen.swift in Sources */,
 				CF23C48C27A622E100D0202E /* Palette.swift in Sources */,
 				CF23C4A027A6505800D0202E /* workingdata.swift in Sources */,
-				CF23C49B27A63E5700D0202E /* throwaway.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import Buy
 
 struct ProductPageView: View {
     @State var showpopover = false
     var title:String
     var price:Decimal
+    var product:storeproduct
+
     var imgurl = URL(string: "https://www.instagram.com/p/CZG_P4iJ4Np/")
     var body: some View {
         ZStack {
@@ -19,14 +22,37 @@ struct ProductPageView: View {
                 
             }
             VStack {
-                Text("").frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height, alignment: .top).background(uicol.forg)
+                Text("").frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height, alignment: .top).background(uicol.forg.opacity(0.7))
             }
             VStack {
-                Image(uiImage: UIImage(named: "cookie1")!).resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0)).aspectRatio(contentMode: .fit).foregroundColor(Color.orange).padding().frame(width: UIScreen.main.bounds.width - 100, height: 300, alignment: .top)
+                AsyncImage(url: product.imageurl) { image in
+                       image
+                           .resizable()
+                           .scaledToFill()
+                   } placeholder: {
+                       ProgressView()
+                   }
+                   .frame(width: UIScreen.main.bounds.width - 100, height: 400, alignment: .top)
+                   .background(Color.gray)
+                   .clipShape(Rectangle())
                 
-                Text("curved vanilla biscut \n \n").popover(isPresented: $showpopover, content: {Text("ohai")})
+                
+        
+                
+                Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {Text("ohai")})
                 Button("Customizations"){showpopover.toggle()}
                 Text("Ingredients")
+                Button(action: {},
+                       label: {
+                    ZStack {
+                        
+                        Rectangle()
+                            .frame(width: 125, height: 50, alignment: .top)
+                            .cornerRadius(20).foregroundColor(.gray)
+                        Text("Add to cart").foregroundColor(.blue).multilineTextAlignment(.center).offset(x: 0, y: 0).frame(width: 75, height: 50, alignment: .center)
+                    }
+                    
+                })
                 
                 
             }
@@ -37,6 +63,6 @@ struct ProductPageView: View {
 
 struct ProductPageView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductPageView(title: "example title", price: Decimal(1))
+        ProductPageView(title: "example title", price: Decimal(1), product: storeproduct(title: "memes", pid: GraphQL.ID(rawValue: "2134234"), price: Decimal(10), imageurl: URL(string: "https://www.instagram.com/p/CZG_P4iJ4Np/")!, cellid: 1))
     }
 }

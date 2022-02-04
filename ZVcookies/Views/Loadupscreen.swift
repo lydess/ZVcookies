@@ -16,11 +16,11 @@ struct LoadupView: View {
             if doshow == false{
         Text("zoeh").task {
             do {
-            await shop.GetShopifyProducts()
-                doshow.toggle()
+                await shop.GetShopifyProducts()
+               
             }
             catch{print("it failed")}
-            
+            doshow.toggle()
         }
             } else {
                 MasterView()

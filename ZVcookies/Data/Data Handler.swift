@@ -18,14 +18,14 @@ class datahandler {
     
     func getPL() -> [NSFetchRequestResult] {
         toptype.returnsObjectsAsFaults = false
-        var example = NSSortDescriptor(key: "idnum", ascending: true)
+        let example = NSSortDescriptor(key: "idnum", ascending: true)
         var final = [NSFetchRequestResult]()
         toptype.sortDescriptors = [example]
         do {
-            var result = try handler.fetch(toptype)
+            let result = try handler.fetch(toptype)
             
             for x in result{
-                var item = x as! Product
+                let item = x as! Product
                 print(item.idnum)
             }
            final = result
@@ -74,7 +74,7 @@ class datahandler {
             let result = try handler.fetch(toptype).last
             
             handler.delete(result as! NSManagedObject)
-        }catch{"eh"}
+        }catch{print("error")}
         
     }
 }

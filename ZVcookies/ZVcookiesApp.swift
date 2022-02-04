@@ -18,5 +18,6 @@ struct ZVcookiesApp: App {
         .onChange(of: scenePhase) { _ in
             persistenceController.save()
         }
+    
 }
 }

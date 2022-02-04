@@ -33,11 +33,7 @@ struct DebugView: View {
                     Button("Get products test"){
                         fetching.toggle()
                     }
-                    Button("get all products"){
-                       
-                    }.task {
-                        await print(shop.getProductslist())
-                    }
+                    
                     if fetching == true {
                         ProgressView("").progressViewStyle(.circular).task {
                             do{await shop.GetShopifyProducts()
@@ -48,9 +44,7 @@ struct DebugView: View {
                     }
                 }
                 Section{
-                    Button("card example"){
-                        ProductPageView(title: "me", price: Decimal(1))
-                    }
+                    
                 }
                 
             }

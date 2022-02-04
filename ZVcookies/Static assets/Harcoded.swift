@@ -37,6 +37,10 @@ struct storeproduct {
     
 }
 
+struct storeorder {
+    var product:storeproduct
+    var completed:Bool
+}
 class hardcoded  {
     func getcatalog() -> [cookiedata] {
         let cookie1 = cookiedata(pageid: 0, photo: Image(uiImage: UIImage(named: "cookie2")!).resizable() , price: 10, title: "normal cookie")
@@ -73,18 +77,4 @@ class hardcoded  {
         
     }
     
-    func throwawayarray() -> [Throwaway] {
-        let throwaway = [
-            Throwaway(),
-            Throwaway(),
-            Throwaway(),
-            Throwaway(),
-            Throwaway(),
-            Throwaway(),
-            Throwaway(),
-            Throwaway()
-        ]
-        
-        return throwaway
-    }
 }

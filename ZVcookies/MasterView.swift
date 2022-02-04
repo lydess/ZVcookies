@@ -45,18 +45,6 @@ struct MasterView: View {
                 
                 }
             
-            if isfetching == true {
-                ProgressView().task {
-                    do { await shop.getProductslist()
-                        isfetching = false
-                        startupcomplete = true
-                    }
-                    catch {print("login failed")}
-                    
-                }
-            } else {
-                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
-            }
         }
       
         

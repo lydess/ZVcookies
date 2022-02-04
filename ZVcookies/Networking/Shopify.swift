@@ -43,51 +43,7 @@ class shopify {
 
     }
     
-    func getProductslist() async -> URL {
-        var fina1l = URL(string: "74081")
-        let getallproducts = Storefront.buildQuery { $0
-                .products(first: 10) { $0
-                .edges { $0
-                .node { $0
-                .id()
-                .title()
-                .images(first: 10) { $0
-                                .edges { $0
-                                    .node { $0
-                                        .id()
-                                        .url()
-                                        
-                                        }
-                                    }
-                                }
-                }
-                }
-                }
-                
-            }
-        
-        let task = await client.queryGraphWith(getallproducts) { response, error in
-            let name = response?.products.edges
-            
-            for x in name! {
-                var me = x.node.title
-                for i in x.node.images.edges {
-                    workingdata.takeback = i.node.url
-                    print("workingdata saved!")
-                    
-                    
-                }
-                
-            }
-            
-            
-        }
-        task.resume()
-    
-        return fina1l!
 
-        
-    }
     
     func getProductsQuery() async -> GraphQL.ID {
         var me = GraphQL.ID(rawValue: "")

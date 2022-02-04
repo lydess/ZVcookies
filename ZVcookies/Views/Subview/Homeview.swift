@@ -85,15 +85,7 @@ struct Homeview: View {
                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(hard.throwawayarray(), id: \.uid ) { item in
-                            Button(action: {}, label: {
-                                Text("").frame(width: 100, height: 100, alignment: .top)
-                                    .background(.mint)
-                                    .cornerRadius(10)
-                                    
-                            })
-                                
-                        }
+                        
                     }
                     
                 }.padding()
@@ -111,15 +103,7 @@ struct Homeview: View {
                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
-                        ForEach(hard.throwawayarray(), id: \.uid ) { item in
-                            Button(action: {}, label: {
-                                Text("").frame(width: 100, height: 100, alignment: .top)
-                                    .background(.mint)
-                                    .cornerRadius(10)
-                                    
-                            })
-                                
-                        }
+                       
                     }
                     
                 }.padding()
