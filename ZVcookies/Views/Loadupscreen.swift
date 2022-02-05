@@ -29,7 +29,7 @@ struct LoadupView: View {
                     
                 })
                 
-               Text("").task {
+               ProgressView().task {
             do {
                 try await shop.GetShopifyProducts()
                

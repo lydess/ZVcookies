@@ -30,27 +30,21 @@ class shopify {
                 .edges { $0
                 .node { $0
                 .price()
-               
                 }
-                }
-                }
+                    }
+                        }
                 .id()
-            
                 .title()
-
                 .images(first: 10) { $0
                                 .edges { $0
                                     .node { $0
                                         .id()
                                         .url()
-                                        
                                         }
                                     }
-                                }
-                }
-                    
-                }
-                    
+                            }
+                        }
+                    }
                 }
                 
         }
@@ -95,21 +89,3 @@ class shopify {
     }
     
 }
-
-
-/*
- {
-   products(first: 10) {
-     edges {
-       node {
-         id
-         title
-         handle
-        
-         
-         
-       }
-     }
-   }
- }
- */
