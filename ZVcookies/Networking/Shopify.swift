@@ -16,8 +16,6 @@ struct shopitem {
 }
 class shopify {
     let client = Graph.Client(shopDomain: "storeofthedank.myshopify.com", apiKey: "af69a8e6ea84ae4f9c42c5f57ab650b6")
-
-    
     
     func GetShopifyProducts() async throws {
         do {
@@ -40,6 +38,7 @@ class shopify {
                                     .node { $0
                                         .id()
                                         .url()
+                                        
                                         }
                                     }
                             }
@@ -50,9 +49,6 @@ class shopify {
         }
         
         let task = client.queryGraphWith(getallproducts) { response, error in
-          
-          
-            
             guard let name = response?.products.edges else {return}
             var cellcount = 0
             for x in name {
@@ -86,6 +82,29 @@ class shopify {
         } catch {
             
         }
+    }
+    
+    func Makeuser(emailstr:String, passwordstr:String){
+        let input = Storefront.CustomerAccessTokenCreateInput.create(
+            email:    emailstr,
+            password: passwordstr
+        )
+
+        let mutation = Storefront.buildMutation { $0
+            .customerAccessTokenCreate(input: input) { $0
+                .customerAccessToken { $0
+                    .accessToken()
+                    .expiresAt()
+                }
+                .userErrors { $0
+                    .field()
+                    .message()
+                }
+            }
+        }
+        
+      
+        
     }
     
 }

@@ -12,6 +12,11 @@ struct Productitem {
     var descrip:String
     var price:String
 }
+
+struct cartitem {
+    var itemname:String
+    var imageurl:URL
+}
 struct PersistenceController {
     // A singleton for our entire app to use
     static let shared = PersistenceController()

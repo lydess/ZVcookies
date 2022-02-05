@@ -34,7 +34,7 @@ struct Homeview: View {
                     DB.deletelast()
                 }.padding(.leading, 30.0)
                 Button("+"){
-                    DB.bakecookie()
+                    
                     
                 }
                 .padding(.trailing, 30.0)

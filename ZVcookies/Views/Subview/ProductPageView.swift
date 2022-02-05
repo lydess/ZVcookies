@@ -35,26 +35,26 @@ struct ProductPageView: View {
                                .resizable()
                                .scaledToFill()
                        } placeholder: {
-                           ProgressView()
+                           Image("cookiedef")
                        }
                        .frame(width: UIScreen.main.bounds.width - 100, height: 400, alignment: .top)
                        .background(Color.gray)
                        .clipShape(Rectangle())
-                    Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {Text("ohai")})
-                    Button("Customizations"){showpopover.toggle()}
-                    
+                    Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {
+                        AddToCartpopover(product: product)
+                    })
                     Text("Ingredients")
                     Button(action: {},
                            label: {
                         ZStack {
                             Rectangle()
-                                .frame(width: 125, height: 50, alignment: .top)
-                                .cornerRadius(20).foregroundColor(.gray)
-                            Text("Add to cart").foregroundColor(.blue).multilineTextAlignment(.center).offset(x: 0, y: 0).frame(width: 75, height: 50, alignment: .center)
+                                .frame(width: 125, height: 60, alignment: .top)
+                                .cornerRadius(10).foregroundColor(uicol.forg)
+                            Button("Add to cart"){showpopover.toggle()}.foregroundColor(.blue).multilineTextAlignment(.center).offset(x: 0, y: 0).frame(width: 75, height: 50, alignment: .center)
                         }
                     })
-                        Text("").frame(width: 500, height: 50, alignment: .top)
-                    }.padding(.bottom, 1).padding(.top, 10)
+                        Text("").frame(width: 500, height: 20, alignment: .top)
+                    }.padding(.bottom, 1).padding(.top, 1)
             }.navigationBarBackButtonHidden(true)
         }.gesture(DragGesture(minimumDistance: 100, coordinateSpace: .global).onEnded({ val in
             

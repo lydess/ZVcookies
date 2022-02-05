@@ -11,8 +11,11 @@ import Buy
 struct DebugView: View {
     @State var doshow = false
     @State var fetching = false
-    @State var title = "product name"
-    @State var viewstate = CGSize.zero
+    @State var makeaccount = false
+    
+    @State var email = ""
+    @State var password = ""
+    
     var body: some View {
         
         VStack {
@@ -21,17 +24,17 @@ struct DebugView: View {
                     DB.getPL()
                 }
                 Button("DB add"){
-                    DB.bakecookie()
+                    
                 }
                 Button("DB delete"){
                     DB.bincookies()
                 }}
                 Section{
-                    Button("Shop"){
-                        doshow.toggle()
-                    }
                     Button("Get products test"){
                         fetching.toggle()
+                    }
+                    Button("Get SRC test"){
+                        
                     }
                     
                     if fetching == true {
@@ -42,27 +45,38 @@ struct DebugView: View {
                             catch{}
                         }
                     }
+                    Button("make user account"){
+                        makeaccount.toggle()
+                    }
                 }
-                Section{
-                    
-                }
+                    if makeaccount == false{
+                        
+                    }else{
+                        Section{
+                            HStack {
+                                Text("email")
+                                Spacer()
+                                TextField("Email", text: $email)
+                            }
+                            HStack {
+                                Text("Password")
+                                Spacer()
+                                TextField("Password", text: $password)
+                            }
+                            Button("Submit"){
+                                shop.Makeuser(emailstr: password, passwordstr: email)
+                            
+                                
+                            }
+                        }
+                    }
+                
+                
                 
             }
             
-            Text(title)
-            Rectangle()
-                .frame(width: 20.0, height: 20.0)
-                .animation(.spring()).offset(y: viewstate.height)
-                .gesture(DragGesture()
-                            .onChanged{value in
-                                self.viewstate = value.translation
-                    
-                }
-                            .onEnded{ value in
-                                self.viewstate = value.translation
-                    
-                }
-            )
+           
+            
         }
        
     }

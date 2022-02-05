@@ -10,19 +10,24 @@ import CoreData
 
 class datahandler {
     let handler = PersistenceController.shared.container.viewContext
-    var toptype = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+    var Productitem = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
+    var Cartitem = NSFetchRequest<NSFetchRequestResult>(entityName: "cartitem")
     
-    
-   
-
+    func addcartitem() {
+        Productitem.returnsObjectsAsFaults = false
+        let example = NSSortDescriptor(key: "cartid", ascending: true)
+        var final = [NSFetchRequestResult]()
+        Productitem.sortDescriptors = [example]
+        
+    }
     
     func getPL() -> [NSFetchRequestResult] {
-        toptype.returnsObjectsAsFaults = false
+        Productitem.returnsObjectsAsFaults = false
         let example = NSSortDescriptor(key: "idnum", ascending: true)
         var final = [NSFetchRequestResult]()
-        toptype.sortDescriptors = [example]
+        Productitem.sortDescriptors = [example]
         do {
-            let result = try handler.fetch(toptype)
+            let result = try handler.fetch(Productitem)
             
             for x in result{
                 let item = x as! Product
@@ -36,8 +41,8 @@ class datahandler {
         return final
     }
     
-    func bakecookie() {
-        toptype.returnsObjectsAsFaults = false
+    func AddSquare(product: storeproduct) {
+        Productitem.returnsObjectsAsFaults = false
         for _ in 0...0 {
         let rawcookie: Product = Product.init(context: handler)
         rawcookie.descrip = "example cook"
@@ -55,9 +60,9 @@ class datahandler {
     }
     
     func bincookies() {
-        toptype.returnsObjectsAsFaults = false
+        Productitem.returnsObjectsAsFaults = false
         do {
-            let result = try handler.fetch(toptype)
+            let result = try handler.fetch(Productitem)
             for x in result {
                 let deets = x as! NSManagedObject
                 handler.delete(deets)
@@ -69,9 +74,9 @@ class datahandler {
     
     func deletelast() {
         
-        toptype.returnsObjectsAsFaults = false
+        Productitem.returnsObjectsAsFaults = false
         do {
-            let result = try handler.fetch(toptype).last
+            let result = try handler.fetch(Productitem).last
             
             handler.delete(result as! NSManagedObject)
         }catch{print("error")}

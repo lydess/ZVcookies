@@ -39,7 +39,11 @@ struct Catalogview: View {
                            .resizable()
                            .scaledToFill()
                    } placeholder: {
-                       ProgressView()
+                       ZStack {
+                           Image("cookiedef")
+                           ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/).progressViewStyle(.circular)
+                       }
+                       
                    }
                    .frame(width: 66, height: 66)
                    .background(Color.gray)
