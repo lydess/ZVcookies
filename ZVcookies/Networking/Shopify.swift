@@ -55,12 +55,15 @@ class shopify {
                 
         }
         
-        let task = await client.queryGraphWith(getallproducts) { response, error in
-            let name = response?.products.edges
+        let task = client.queryGraphWith(getallproducts) { response, error in
+          
+          
+            
+            guard let name = response?.products.edges else {return}
             var cellcount = 0
-            for x in name! {
-                var title = x.node.title
-                var prodid = x.node.id
+            for x in name {
+                let title = x.node.title
+                let prodid = x.node.id
                 var imageurl = URL(string: "")
                 var pricedec = Decimal(1)
                 for image in x.node.images.edges {
