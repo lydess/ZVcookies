@@ -30,14 +30,6 @@ struct Homeview: View {
                     .padding(.leading, 30.0)
                 
                 Spacer()
-                Button("-"){
-                    DB.deletelast()
-                }.padding(.leading, 30.0)
-                Button("+"){
-                    
-                    
-                }
-                .padding(.trailing, 30.0)
             }
             ScrollView{
             HStack {

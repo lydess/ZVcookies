@@ -26,7 +26,9 @@ struct MasterView: View {
         // UITabBar.appearance().isTranslucent = false
         // UITabBar.appearance().backgroundColor = .secondaryLabel
         UITabBar.appearance().unselectedItemTintColor = .white
-        UITabBar.appearance().backgroundColor = UIColor(named: "foreg")
+        UITabBar.appearance().backgroundColor = UIColor(named: "Testcol")
+       
+        UITabBar.appearance().unselectedItemTintColor = .systemMint
         
     }
     var buttlist = hard.gethomelayout()
@@ -39,7 +41,7 @@ struct MasterView: View {
                 
                 Homeview().tabItem{ Image(systemName: "house")}.tag(3).animation(.easeOut, value: working.pickedscreen)
                 Storeview().tabItem{ Image(systemName: "bag.circle").resizable() }.tag(1)
-                Text("to be completed").tabItem{ Image(systemName: "cart").resizable() }.tag(2).animation(.easeOut, value: working.pickedscreen)
+                CartView().tabItem{ Image(systemName: "cart").resizable() }.tag(2).animation(.easeOut, value: working.pickedscreen)
                 AboutView().tabItem{ Image(systemName: "questionmark.circle.fill").symbolRenderingMode(.palette) }.tag(0).animation(.easeOut, value: working.pickedscreen)
                 
                 

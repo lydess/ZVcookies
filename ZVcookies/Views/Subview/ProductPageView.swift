@@ -7,10 +7,13 @@
 
 import SwiftUI
 import Buy
+import CachedAsyncImage
 
 struct ProductPageView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var showpopover = false
+    @State var ingrediantpopover = false
+    @State var alertvar = false
     var title:String
     var price:Decimal
     var product:storeproduct
@@ -30,7 +33,7 @@ struct ProductPageView: View {
             
             VStack {
                     ScrollView{
-                    AsyncImage(url: product.imageurl) { image in
+                        CachedAsyncImage(url: product.imageurl) { image in
                            image
                                .resizable()
                                .scaledToFill()
@@ -40,17 +43,26 @@ struct ProductPageView: View {
                        .frame(width: UIScreen.main.bounds.width - 100, height: 400, alignment: .top)
                        .background(Color.gray)
                        .clipShape(Rectangle())
+                        
                     Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {
                         AddToCartpopover(product: product)
                     })
-                    Text("Ingredients")
+                        Button("ingredients"){
+                            ingrediantpopover.toggle()
+                        }.popover(isPresented: $ingrediantpopover, content: {
+                            Ingredients__view()
+                        }).padding()
                     Button(action: {},
                            label: {
                         ZStack {
                             Rectangle()
                                 .frame(width: 125, height: 60, alignment: .top)
                                 .cornerRadius(10).foregroundColor(uicol.forg)
-                            Button("Add to cart"){showpopover.toggle()}.foregroundColor(.blue).multilineTextAlignment(.center).offset(x: 0, y: 0).frame(width: 75, height: 50, alignment: .center)
+                            Button("Add to cart"){DB.AddSquare(product: product)
+                                alertvar.toggle()
+                            }.alert("Carts are hard, give me a break", isPresented: $alertvar, actions: {Text("me")})
+                            .foregroundColor(.mint).multilineTextAlignment(.center).offset(x: 0, y: 0)
+                            .frame(width: 75, height: 50, alignment: .center)
                         }
                     })
                         Text("").frame(width: 500, height: 20, alignment: .top)

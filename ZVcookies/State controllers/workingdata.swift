@@ -13,5 +13,11 @@ class workingdata: ObservableObject {
     @Published var doshowback = false
     static var takeback = URL(string: "ddd")
     static var activeproducts = [storeproduct]()
+    
+    func formatproducts() -> [storeproduct] {
+        var workinglist = workingdata.activeproducts
+        
+        return workingdata.activeproducts
+    }
 }
 

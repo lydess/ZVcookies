@@ -5,10 +5,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UITabBar</key>
-		<dict>
-			<key>UIImageName</key>
-			<string>Unknown</string>
-		</dict>
+		<dict/>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<true/>
 		<key>UIColorName</key>

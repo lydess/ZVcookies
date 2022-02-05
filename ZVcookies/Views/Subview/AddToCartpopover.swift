@@ -8,11 +8,17 @@
 import SwiftUI
 import Buy
 import Pay
+import CachedAsyncImage
 
 struct AddToCartpopover: View {
     var product:storeproduct
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            CachedAsyncImage(url: product.imageurl)
+            HStack {
+                Text(product.title)
+            }
+        }
     }
 }
 

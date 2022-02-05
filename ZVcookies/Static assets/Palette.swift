@@ -21,6 +21,6 @@ struct Palate {
         foreground = Color(.sRGB, red: 0.941, green: 0.943, blue: 0.933, opacity: 1.0)
         Secondback = Color(.sRGB, red: 0.376, green: 0.420, blue: 0.435, opacity: 1.0)
         Thirdback = Color(.sRGB, red: 0.200, green: 0.235, blue: 0.243, opacity: 1.0)
-        forg = Color(uiColor: UIColor(named: "foreg")!)
+        forg = Color(uiColor: UIColor(named: "Testcol")!)
     }
 }

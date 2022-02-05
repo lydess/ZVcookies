@@ -45,9 +45,12 @@ class datahandler {
         Productitem.returnsObjectsAsFaults = false
         for _ in 0...0 {
         let rawcookie: Product = Product.init(context: handler)
-        rawcookie.descrip = "example cook"
-        rawcookie.price = "210 dollary dos"
-        rawcookie.name = "funny cookie"
+            rawcookie.descrip = "example cook"
+            rawcookie.price = product.price.description
+            rawcookie.name = product.title
+            rawcookie.imageurl = product.imageurl
+            rawcookie.shopid = product.pid.description
+            
         let currentid = getPL().last as! Product
         let newone = currentid.idnum
             
@@ -77,7 +80,7 @@ class datahandler {
         Productitem.returnsObjectsAsFaults = false
         do {
             let result = try handler.fetch(Productitem).last
-            
+            let cartitem: Product = Product.init(context: handler)
             handler.delete(result as! NSManagedObject)
         }catch{print("error")}
         
