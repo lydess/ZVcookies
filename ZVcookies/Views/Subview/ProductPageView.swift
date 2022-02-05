@@ -19,57 +19,52 @@ struct ProductPageView: View {
     var body: some View {
        
         ZStack {
-            
             VStack {
                 Text("").frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).background(.white)
-                
             }
             VStack {
+                
                 VStack{
-                    HStack {
-                        Button("<"){presentationMode.wrappedValue.dismiss()}.padding(.top, 40.0).padding(.leading,20)
-                        Spacer()
-                    }
                 }.frame(width: UIScreen.main.bounds.width - 100, height: UIScreen.main.bounds.height, alignment: .top).background(uicol.forg.opacity(0.7))
             }
             
             VStack {
-                
-                AsyncImage(url: product.imageurl) { image in
-                       image
-                           .resizable()
-                           .scaledToFill()
-                   } placeholder: {
-                       ProgressView()
-                   }
-                   .frame(width: UIScreen.main.bounds.width - 100, height: 400, alignment: .top)
-                   .background(Color.gray)
-                   .clipShape(Rectangle())
-                
-                
-        
-                
-                Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {Text("ohai")})
-                Button("Customizations"){showpopover.toggle()}
-                
-                Text("Ingredients")
-                Button(action: {},
-                       label: {
-                    ZStack {
-                        
-                        Rectangle()
-                            .frame(width: 125, height: 50, alignment: .top)
-                            .cornerRadius(20).foregroundColor(.gray)
-                        Text("Add to cart").foregroundColor(.blue).multilineTextAlignment(.center).offset(x: 0, y: 0).frame(width: 75, height: 50, alignment: .center)
-                    }
+                    ScrollView{
+                    AsyncImage(url: product.imageurl) { image in
+                           image
+                               .resizable()
+                               .scaledToFill()
+                       } placeholder: {
+                           ProgressView()
+                       }
+                       .frame(width: UIScreen.main.bounds.width - 100, height: 400, alignment: .top)
+                       .background(Color.gray)
+                       .clipShape(Rectangle())
+                    Text(product.title + "\n \n").popover(isPresented: $showpopover, content: {Text("ohai")})
+                    Button("Customizations"){showpopover.toggle()}
                     
-                })
-                
-                
+                    Text("Ingredients")
+                    Button(action: {},
+                           label: {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 125, height: 50, alignment: .top)
+                                .cornerRadius(20).foregroundColor(.gray)
+                            Text("Add to cart").foregroundColor(.blue).multilineTextAlignment(.center).offset(x: 0, y: 0).frame(width: 75, height: 50, alignment: .center)
+                        }
+                    })
+                        Text("").frame(width: 500, height: 50, alignment: .top)
+                    }.padding(.bottom, 1).padding(.top, 10)
             }.navigationBarBackButtonHidden(true)
+        }.gesture(DragGesture(minimumDistance: 100, coordinateSpace: .global).onEnded({ val in
             
+            if val.translation.width > 0 {
+            presentationMode.wrappedValue.dismiss()
+            }
             
-        }
+        }))
+        
+           
         
     }
 }
