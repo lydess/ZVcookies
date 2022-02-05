@@ -16,71 +16,11 @@ struct shopitem {
 }
 class shopify {
     let client = Graph.Client(shopDomain: "storeofthedank.myshopify.com", apiKey: "af69a8e6ea84ae4f9c42c5f57ab650b6")
-    
-    func example() {
-       
-        
-        
-        let getoneproduct = Storefront.buildQuery { $0
-            .node(id: GraphQL.ID(rawValue: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3MDMzMzI1NTY4NjE=")) { $0
-                .onProduct { $0
-                    
-                
-                    .title()
-                    
-                }
-                    
-                }
-            }
-        
-        let task = client.queryGraphWith(getoneproduct) { response, error in
-            let name = response?.node as! Storefront.Product
-            print(name.title)
-        }
-        task.resume()
-        
-       
-
-    }
-    
 
     
-    func getProductsQuery() async -> GraphQL.ID {
-        var me = GraphQL.ID(rawValue: "")
-        let query = Storefront.buildQuery { $0
-                .products(first: 10) { $0
-                .edges() { $0
-                    .node() { $0
-                        .id()
-                        .title()
-                        .images(first: 10) { $0
-                                        .edges { $0
-                                            .node { $0
-                                                .id()
-                                                .src()
-                                            }
-                                        }
-                                    }
-                       
-                        
-                    }
-                }
-                }
-            }
-        let task = client.queryGraphWith(query) { response, error in
-            let name = response?.products.edges[0].node.id
-            print(name!)
-            me = name!
-            
-           
-            
-        }
-        task.resume()
-        return me
-        
-       }
     
-    func GetShopifyProducts() async {
+    func GetShopifyProducts() async throws {
+        do {
        
         let getallproducts = Storefront.buildQuery { $0
                 .products(first: 10) { $0
@@ -113,7 +53,7 @@ class shopify {
                     
                 }
                 
-            }
+        }
         
         let task = await client.queryGraphWith(getallproducts) { response, error in
             let name = response?.products.edges
@@ -132,18 +72,23 @@ class shopify {
                     
                 }
                 var newproudct = storeproduct(title: title, pid: prodid, price: pricedec, imageurl: imageurl!, cellid: cellcount)
-                print("Newproduct generated: " + title + " \(prodid) " + "\(imageurl!)")
+                
                 workingdata.activeproducts.append(newproudct)
                 cellcount += 1
             }
-            print("contents of active products" + "\(workingdata.activeproducts.debugDescription)")
+            print("Loaded " + "\(workingdata.activeproducts.count)" + " Products")
+            
             
         }
         task.resume()
-    
+            if workingdata.activeproducts.count == 0 {
+                throw Networkingerror.fetchempty
+            }
        
 
-        
+        } catch {
+            
+        }
     }
     
 }

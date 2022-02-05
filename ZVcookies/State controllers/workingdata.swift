@@ -14,3 +14,4 @@ class workingdata: ObservableObject {
     static var takeback = URL(string: "ddd")
     static var activeproducts = [storeproduct]()
 }
+

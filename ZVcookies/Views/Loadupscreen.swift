@@ -10,18 +10,33 @@ import SwiftUI
 
 struct LoadupView: View {
     @State var doshow = false
+    @State var loadingcomplete = false
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+
     
     var body: some View {
         VStack{
+            
             if doshow == false{
-        Text("zoeh").task {
+                Image("cookielogo")
+                Text("Zoes Cookies").onReceive(timer, perform: { input in
+                    if workingdata.activeproducts.count == 0 {
+                        print("waiting for inital fetch")
+                    }else{
+                    doshow = true
+                    }
+                    
+                })
+                
+               Text("").task {
             do {
-                await shop.GetShopifyProducts()
+                try await shop.GetShopifyProducts()
                
             }
             catch{print("it failed")}
-            doshow.toggle()
         }
+        
             } else {
                 MasterView()
             }
@@ -29,5 +44,11 @@ struct LoadupView: View {
         
        
         }
+    }
+}
+
+struct Loadupscreen_preview: PreviewProvider {
+    static var previews: some View {
+        LoadupView()
     }
 }

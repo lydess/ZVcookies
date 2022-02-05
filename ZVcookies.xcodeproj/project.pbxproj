@@ -36,6 +36,7 @@
 		CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA027A92AFE00A63D44 /* Detail sheet.swift */; };
 		CF960EA327A949C900A63D44 /* ProductPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA227A949C900A63D44 /* ProductPageView.swift */; };
 		CFE5883127ABAF9E005B7A2F /* Loadupscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE5883027ABAF9E005B7A2F /* Loadupscreen.swift */; };
+		CFFF98D427ADF939004B366D /* Networkerrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF98D327ADF939004B366D /* Networkerrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		CF960EA027A92AFE00A63D44 /* Detail sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail sheet.swift"; sourceTree = "<group>"; };
 		CF960EA227A949C900A63D44 /* ProductPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPageView.swift; sourceTree = "<group>"; };
 		CFE5883027ABAF9E005B7A2F /* Loadupscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Loadupscreen.swift; path = ZVcookies/Views/Loadupscreen.swift; sourceTree = SOURCE_ROOT; };
+		CFFF98D327ADF939004B366D /* Networkerrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkerrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				CF23C4BB27A8D65F00D0202E /* Shopify.swift */,
+				CFFF98D327ADF939004B366D /* Networkerrors.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */,
 				CFE5883127ABAF9E005B7A2F /* Loadupscreen.swift in Sources */,
 				CF23C48C27A622E100D0202E /* Palette.swift in Sources */,
+				CFFF98D427ADF939004B366D /* Networkerrors.swift in Sources */,
 				CF23C4A027A6505800D0202E /* workingdata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

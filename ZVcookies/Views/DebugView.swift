@@ -36,7 +36,7 @@ struct DebugView: View {
                     
                     if fetching == true {
                         ProgressView("").progressViewStyle(.circular).task {
-                            do{await shop.GetShopifyProducts()
+                            do{try await shop.GetShopifyProducts()
                                 fetching.toggle()
                             }
                             catch{}
@@ -48,14 +48,7 @@ struct DebugView: View {
                 }
                 
             }
-            if doshow == true {
-                ProgressView().task {
-                    do{  await shop.getProductsQuery()}
-                    catch{print("it died")}
-                }
-            } else {
-                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
-            }
+            
             Text(title)
             Rectangle()
                 .frame(width: 20.0, height: 20.0)
