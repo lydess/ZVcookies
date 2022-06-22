@@ -15,7 +15,7 @@ struct shopitem {
     var price:String
 }
 class shopify {
-    let client = Graph.Client(shopDomain: "storeofthedank.myshopify.com", apiKey: "af69a8e6ea84ae4f9c42c5f57ab650b6")
+    let client = Graph.Client(shopDomain: "-", apiKey: "-")
     
     func GetShopifyProducts() async throws {
         do {
