@@ -37,7 +37,7 @@ class datahandler {
             
         }
         
-        catch{print("shes fucked mate")}
+        catch{print("Product not found in coredata call")}
         return final
     }
     
@@ -59,7 +59,7 @@ class datahandler {
         }
         do {
             try handler.save()
-        }catch{print("oop, it boopd")}
+        }catch{print("Unable to locate item in Coredata call")}
     }
     
     func bincookies() {
@@ -72,7 +72,7 @@ class datahandler {
                 
             }
         }
-        catch {print("failed")}
+        catch {print("Unable to remove item")}
     }
     
     func deletelast() {
@@ -82,7 +82,7 @@ class datahandler {
             let result = try handler.fetch(Productitem).last
             let cartitem: Product = Product.init(context: handler)
             handler.delete(result as! NSManagedObject)
-        }catch{print("error")}
+        }catch{print("Unable to delete last item")}
         
     }
 }
