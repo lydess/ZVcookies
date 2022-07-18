@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "mobile-buy-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Shopify/mobile-buy-sdk-ios.git",
+      "state" : {
+        "revision" : "62d2bc07c16521875d0b267171b46fd927ab552e",
+        "version" : "7.1.0"
+      }
+    },
+    {
+      "identity" : "swiftui-cachedasyncimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/lorenzofiamingo/SwiftUI-CachedAsyncImage.git",
+      "state" : {
+        "revision" : "58d9324354f8b321f0aad906f0abdaa4ded9243f",
+        "version" : "1.11.0"
+      }
+    }
+  ],
+  "version" : 2
+}
