@@ -32,6 +32,9 @@
 		CF23C4B927A8D58A00D0202E /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B827A8D58A00D0202E /* Pay */; };
 		CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4BB27A8D65F00D0202E /* Shopify.swift */; };
 		CF7713212884F25E006F7DCA /* Debugmethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7713202884F25E006F7DCA /* Debugmethods.swift */; };
+		CF7713232884FA88006F7DCA /* UNI_0034-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF7713222884FA88006F7DCA /* UNI_0034-2.jpeg */; };
+		CF7713262884FADF006F7DCA /* MON_0035-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF7713252884FADF006F7DCA /* MON_0035-2.jpeg */; };
+		CF7713282884FB30006F7DCA /* IMG_0036.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF7713272884FB30006F7DCA /* IMG_0036.jpeg */; };
 		CF8AE37227AE5EC300AB020F /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE37127AE5EC300AB020F /* CartView.swift */; };
 		CF8AE37427AE72A900AB020F /* Ingredients  view.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE37327AE72A900AB020F /* Ingredients  view.swift */; };
 		CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA027A92AFE00A63D44 /* Detail sheet.swift */; };
@@ -87,6 +90,9 @@
 		CF23C4B327A7C89600D0202E /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
 		CF23C4BB27A8D65F00D0202E /* Shopify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		CF7713202884F25E006F7DCA /* Debugmethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugmethods.swift; sourceTree = "<group>"; };
+		CF7713222884FA88006F7DCA /* UNI_0034-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "UNI_0034-2.jpeg"; sourceTree = "<group>"; };
+		CF7713252884FADF006F7DCA /* MON_0035-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MON_0035-2.jpeg"; sourceTree = "<group>"; };
+		CF7713272884FB30006F7DCA /* IMG_0036.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0036.jpeg; sourceTree = "<group>"; };
 		CF8AE37127AE5EC300AB020F /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		CF8AE37327AE72A900AB020F /* Ingredients  view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredients  view.swift"; sourceTree = "<group>"; };
 		CF960EA027A92AFE00A63D44 /* Detail sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail sheet.swift"; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CF23C46327A6203B00D0202E /* Assets.xcassets */,
+				CF7713242884FAA4006F7DCA /* Debug Assets */,
 				CF23C48B27A622E100D0202E /* Palette.swift */,
 				CF23C48D27A627EB00D0202E /* Staticassets.swift */,
 				CF23C49527A62D8300D0202E /* Harcoded.swift */,
@@ -250,6 +257,16 @@
 				CFFF98D327ADF939004B366D /* Networkerrors.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		CF7713242884FAA4006F7DCA /* Debug Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CF7713272884FB30006F7DCA /* IMG_0036.jpeg */,
+				CF7713252884FADF006F7DCA /* MON_0035-2.jpeg */,
+				CF7713222884FA88006F7DCA /* UNI_0034-2.jpeg */,
+			);
+			path = "Debug Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,8 +382,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7713282884FB30006F7DCA /* IMG_0036.jpeg in Resources */,
 				CF23C4B427A7C89600D0202E /* Unknown.jpeg in Resources */,
+				CF7713232884FA88006F7DCA /* UNI_0034-2.jpeg in Resources */,
 				CF23C46727A6203B00D0202E /* Preview Assets.xcassets in Resources */,
+				CF7713262884FADF006F7DCA /* MON_0035-2.jpeg in Resources */,
 				CF23C46427A6203B00D0202E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@ struct ZVcookiesApp: App {
             MasterView().environment(\.managedObjectContext, persistenceController.container.viewContext).task {
             #if DEBUG
                 print("Running In Debug, Executing assigned debug methods")
+                print(Bundle.main.resourceURL)
                 debugmethods.addSampleProducts()
                 
                 
