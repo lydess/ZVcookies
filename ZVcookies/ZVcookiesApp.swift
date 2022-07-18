@@ -9,11 +9,21 @@ import SwiftUI
 
 @main
 struct ZVcookiesApp: App {
+    
     @Environment(\.scenePhase) var scenePhase
+    var debugmethods = DebugMethods()
     var body: some Scene {
         let persistenceController = PersistenceController.shared
         WindowGroup {
-            LoadupView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MasterView().environment(\.managedObjectContext, persistenceController.container.viewContext).task {
+            #if DEBUG
+                print("Running In Debug, Executing assigned debug methods")
+                debugmethods.addSampleProducts()
+                
+                
+            #endif
+            }
+            
         }
         .onChange(of: scenePhase) { _ in
             persistenceController.save()

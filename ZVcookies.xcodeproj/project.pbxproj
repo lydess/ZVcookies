@@ -31,6 +31,7 @@
 		CF23C4B727A8D58A00D0202E /* Buy in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B627A8D58A00D0202E /* Buy */; };
 		CF23C4B927A8D58A00D0202E /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B827A8D58A00D0202E /* Pay */; };
 		CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4BB27A8D65F00D0202E /* Shopify.swift */; };
+		CF7713212884F25E006F7DCA /* Debugmethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7713202884F25E006F7DCA /* Debugmethods.swift */; };
 		CF8AE37227AE5EC300AB020F /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE37127AE5EC300AB020F /* CartView.swift */; };
 		CF8AE37427AE72A900AB020F /* Ingredients  view.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8AE37327AE72A900AB020F /* Ingredients  view.swift */; };
 		CF960EA127A92AFE00A63D44 /* Detail sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF960EA027A92AFE00A63D44 /* Detail sheet.swift */; };
@@ -85,6 +86,7 @@
 		CF23C4B127A7BA7000D0202E /* Data Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Handler.swift"; sourceTree = "<group>"; };
 		CF23C4B327A7C89600D0202E /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
 		CF23C4BB27A8D65F00D0202E /* Shopify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
+		CF7713202884F25E006F7DCA /* Debugmethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugmethods.swift; sourceTree = "<group>"; };
 		CF8AE37127AE5EC300AB020F /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		CF8AE37327AE72A900AB020F /* Ingredients  view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ingredients  view.swift"; sourceTree = "<group>"; };
 		CF960EA027A92AFE00A63D44 /* Detail sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail sheet.swift"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				CF23C49F27A6505800D0202E /* workingdata.swift */,
+				CF7713202884F25E006F7DCA /* Debugmethods.swift */,
 			);
 			path = "State controllers";
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */,
 				CF23C49027A629E900D0202E /* Storeview.swift in Sources */,
 				CF23C4A327A6568300D0202E /* HomeButtonView.swift in Sources */,
+				CF7713212884F25E006F7DCA /* Debugmethods.swift in Sources */,
 				CF23C4AB27A7B77200D0202E /* Data management.swift in Sources */,
 				CF23C46027A6203A00D0202E /* ZVcookiesApp.swift in Sources */,
 				CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */,

@@ -23,8 +23,6 @@ struct MasterView: View {
     @State var startupcomplete = false
     @State var isfetching = false
     init() {
-        // UITabBar.appearance().isTranslucent = false
-        // UITabBar.appearance().backgroundColor = .secondaryLabel
         UITabBar.appearance().unselectedItemTintColor = .white
         UITabBar.appearance().backgroundColor = UIColor(named: "Testcol")
        
@@ -47,7 +45,9 @@ struct MasterView: View {
                 
                 }
             
-        }
+        }.task({
+            
+        })
       
         
         
