@@ -27,7 +27,6 @@
 		CF23C4AE27A7B84300D0202E /* Primary model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4AC27A7B84300D0202E /* Primary model.xcdatamodeld */; };
 		CF23C4B027A7BA1A00D0202E /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4AF27A7BA1A00D0202E /* DebugView.swift */; };
 		CF23C4B227A7BA7000D0202E /* Data Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4B127A7BA7000D0202E /* Data Handler.swift */; };
-		CF23C4B427A7C89600D0202E /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF23C4B327A7C89600D0202E /* Unknown.jpeg */; };
 		CF23C4B727A8D58A00D0202E /* Buy in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B627A8D58A00D0202E /* Buy */; };
 		CF23C4B927A8D58A00D0202E /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = CF23C4B827A8D58A00D0202E /* Pay */; };
 		CF23C4BC27A8D65F00D0202E /* Shopify.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF23C4BB27A8D65F00D0202E /* Shopify.swift */; };
@@ -87,7 +86,6 @@
 		CF23C4AD27A7B84300D0202E /* Primary model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Primary model.xcdatamodel"; sourceTree = "<group>"; };
 		CF23C4AF27A7BA1A00D0202E /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		CF23C4B127A7BA7000D0202E /* Data Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Handler.swift"; sourceTree = "<group>"; };
-		CF23C4B327A7C89600D0202E /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Unknown.jpeg; sourceTree = "<group>"; };
 		CF23C4BB27A8D65F00D0202E /* Shopify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopify.swift; sourceTree = "<group>"; };
 		CF7713202884F25E006F7DCA /* Debugmethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugmethods.swift; sourceTree = "<group>"; };
 		CF7713222884FA88006F7DCA /* UNI_0034-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "UNI_0034-2.jpeg"; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 				CF23C4AA27A7B77200D0202E /* Data management.swift */,
 				CF23C4AC27A7B84300D0202E /* Primary model.xcdatamodeld */,
 				CF23C4B127A7BA7000D0202E /* Data Handler.swift */,
-				CF23C4B327A7C89600D0202E /* Unknown.jpeg */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -383,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF7713282884FB30006F7DCA /* IMG_0036.jpeg in Resources */,
-				CF23C4B427A7C89600D0202E /* Unknown.jpeg in Resources */,
 				CF7713232884FA88006F7DCA /* UNI_0034-2.jpeg in Resources */,
 				CF23C46727A6203B00D0202E /* Preview Assets.xcassets in Resources */,
 				CF7713262884FADF006F7DCA /* MON_0035-2.jpeg in Resources */,
@@ -523,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -578,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -604,6 +600,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,6 +630,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

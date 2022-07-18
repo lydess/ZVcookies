@@ -17,10 +17,10 @@ struct AboutView: View {
             NavigationView{
                 List{
                     Section {
-                        NavigationLink(destination: {Text("r")}, label: {Text("Shipping information")})
-                        NavigationLink(destination: {Text("r")}, label: {Text("About us")})
-                        NavigationLink(destination: {Text("r")}, label: {Text("Diet and Nutrition information")})
-                        NavigationLink(destination: {Text("r")}, label: {Text("Contact us")})
+                        NavigationLink(destination: {Text("We ship to australia and New zealand, refer to individual products for shipping rates")}, label: {Text("Shipping information")})
+                        NavigationLink(destination: {Text("We are a cookie company created from a family kitchen in richmond, we love the smell of freshly baked cookies and want to spread that feeling to all over australia")}, label: {Text("About us")})
+                        NavigationLink(destination: {Text("They're probably good for you")}, label: {Text("Diet and Nutrition information")})
+                        NavigationLink(destination: {Text("Dm us on insta or refer to the contact page to get in touch")}, label: {Text("Contact us")})
                 }
                         NavigationLink(destination: {DebugView()}, label: {Text("Debug")})
                 
