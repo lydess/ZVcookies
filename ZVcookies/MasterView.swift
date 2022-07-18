@@ -37,17 +37,25 @@ struct MasterView: View {
            
                 TabView(selection: $working.pickedscreen) {
                 
-                Homeview().tabItem{ Image(systemName: "house")}.tag(3).animation(.easeOut, value: working.pickedscreen)
-                Storeview().tabItem{ Image(systemName: "bag.circle").resizable() }.tag(1)
-                CartView().tabItem{ Image(systemName: "cart").resizable() }.tag(2).animation(.easeOut, value: working.pickedscreen)
+                Homeview().tabItem{
+                    Image(systemName: "house")}
+                        .tag(3)
+                        .animation(.easeOut, value: working.pickedscreen)
+                       
+                Storeview().tabItem{
+                    Image(systemName: "bag.circle")
+                        .resizable() }
+                        .tag(1)
+                CartView().tabItem{
+                    Image(systemName: "cart").resizable() }
+                    .tag(2)
+                    .animation(.easeOut, value: working.pickedscreen)
                 AboutView().tabItem{ Image(systemName: "questionmark.circle.fill").symbolRenderingMode(.palette) }.tag(0).animation(.easeOut, value: working.pickedscreen)
                 
                 
                 }
             
-        }.task({
-            
-        })
+        }
       
         
         

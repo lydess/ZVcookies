@@ -16,9 +16,10 @@ class DebugMethods{
         let filePath3 = Bundle.main.path(forResource: "IMG_0036.jpeg", ofType: "")!
         
         var examplelist = [storeproduct]()
-        let example1 = storeproduct(title: "Cookies", pid: GraphQL.ID(rawValue: ""), price: 0.5, imageurl: URL(fileURLWithPath: filePath1), cellid: 0)
-        let example2 = storeproduct(title: "Cookie bag", pid: GraphQL.ID(rawValue: ""), price: 0.5, imageurl: URL(fileURLWithPath: filePath2), cellid: 1)
-        let example3 = storeproduct(title: "cookie king", pid: GraphQL.ID(rawValue: ""), price: 0.5, imageurl: URL(fileURLWithPath: filePath3), cellid: 2)
+        let example1 = storeproduct(title: "Cookies", pid: GraphQL.ID(rawValue: "1"), price: 0.5, imageurl: URL(fileURLWithPath: filePath1), cellid: 0)
+        let example2 = storeproduct(title: "Cookie bag", pid: GraphQL.ID(rawValue: "2"), price: 0.5, imageurl: URL(fileURLWithPath: filePath2), cellid: 0)
+        let example3 = storeproduct(title: "cookie king", pid: GraphQL.ID(rawValue: "3"), price: 0.5, imageurl: URL(fileURLWithPath: filePath3), cellid: 0)
+      
         
         examplelist.append(contentsOf: [example1,example2,example3])
         

@@ -52,6 +52,7 @@ struct ProductPageView: View {
                         }.popover(isPresented: $ingrediantpopover, content: {
                             Ingredients__view()
                         }).padding()
+                            .foregroundColor(.mint)
                     Button(action: {},
                            label: {
                         ZStack {
@@ -60,7 +61,7 @@ struct ProductPageView: View {
                                 .cornerRadius(10).foregroundColor(uicol.forg)
                             Button("Add to cart"){DB.AddSquare(product: product)
                                 alertvar.toggle()
-                            }.alert("Carts are hard, give me a break", isPresented: $alertvar, actions: {Text("me")})
+                            }.alert("Added to Cart", isPresented: $alertvar, actions: {Text("me")})
                             .foregroundColor(.mint).multilineTextAlignment(.center).offset(x: 0, y: 0)
                             .frame(width: 75, height: 50, alignment: .center)
                         }

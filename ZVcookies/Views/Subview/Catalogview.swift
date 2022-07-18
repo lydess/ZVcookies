@@ -41,6 +41,7 @@ struct Catalogview: View {
                    } placeholder: {
                        ZStack {
                            Image("cookiedef")
+                           
                            ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/).progressViewStyle(.circular)
                        }
                        
@@ -67,6 +68,6 @@ struct Catalogview: View {
 
 struct Catalogview_Previews: PreviewProvider {
     static var previews: some View {
-        Catalogview(titletext: "testtext", pricetext: Decimal(1), asyncurl: workingdata.activeproducts[0].imageurl)
+        Catalogview(titletext: "testtext", pricetext: Decimal(1), asyncurl: URL(fileURLWithPath: Bundle.main.path(forResource: "IMG_0036.jpeg", ofType: "")!))
     }
 }
